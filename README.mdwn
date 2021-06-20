@@ -1,3 +1,47 @@
-# Hello
+# C, C++ 완벽 정복
 
+### 목차
 
+- 학습 목표
+- Repository 디렉토리 구조
+  - assignment
+  - jang-won-ik
+  - park-ji-hun
+- 학습 과정 및 일정
+  - C
+  - C++
+
+# 학습 목표
+
+> BoB 10기 top 30 을 위해서 C와 C++ 을 완벽 정복한다
+
+### 기본 교재
+
+[윤성우의 열혈 C 프로그래밍](http://book.interpark.com/product/BookDisplay.do?_method=detail&sc.prdNo=206832627&gclid=CjwKCAjwzruGBhBAEiwAUqMR8KL5jmoaV4rdoBQL6avUdtpsbhHlpCxJq5tK4zsJgyXt970hmBg9FRoCWikQAvD_BwE)
+
+# Repository 디렉토리 구조
+
+### assignment 디렉토리
+
+과제 및 공통 학습을 정리하는 디렉토리
+
+### park-ji-hun, jang-won-ik 디렉토리
+
+개인 학습 및 테스트용 코드가 존재하는 C 프로젝트
+
+# 학습 과정 및 일정
+
+- C
+  - 변수 및 자료형
+  - 반복문 & 조건문 & 분기문
+  - 함수
+  - 포인터 & 배열
+  - 구조체 1
+  - 구조체 2
+  - 메모리 관리와 동적 할당
+- C++
+  - C 언어 기반의 C++ Migration
+  - 객체지향 1
+  - 객체지향 2
+  - 상속과 다형성
+  - Virtual과 다중상속
