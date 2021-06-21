@@ -1,3 +1,5 @@
+[##_Image|kage@woxWE/btq7SMNlXab/bzNouN2jeIS0xf46Eeb0R0/img.png|alignCenter|data-origin-width="960" data-origin-height="496" width="641" height="331" data-ke-mobilestyle="widthOrigin"|||_##]
+
 # C 언어의 변수
 
 우선 변수란 무엇일까?
