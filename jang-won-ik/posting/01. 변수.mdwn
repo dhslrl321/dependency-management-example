@@ -1,0 +1,98 @@
+# C 언어의 변수
+
+우선 변수란 무엇일까?
+
+#### 변수는 **바뀔 수 있는, 변할 수 있는 어떠한 값**이다.
+
+변수는 **숫자의 표현**과 **메모리의 주소값** 그리고 관련된 **데이터를 묶어서 사용하는 형태**의 사용에 따라서 나뉘게 된다.
+
+- **숫자의 표현**
+  - 마이크로프로세서의 ALU에 의해 동작하게 되는 것들
+    - 정수형
+      - int
+      - char
+    - 실수형
+      - short
+      - double
+    - 변수의 크기
+      - short
+      - long
+    - 음수 양수
+      - signed
+      - unsigned
+- **메모리 주소값의 표현**
+  - 데이터가 있는 위치의 표현
+    - 포인터 변수
+- **데이터를 묶어서 표현**
+  - struct 변수
+
+# 변수의 타입에 따른 크기와 범위
+
+int 형 데이터 타입은 대략 **21억**의 수를 저장할 수 있다.
+
+만약 21억을 **넘어가면** 어떤 일이 생길까?
+
+```c
+#include <stdio.h>
+
+int main() {
+    int number;
+
+    // int 데이터 타입의 최대 수 2147483647
+    number = 2147483647;
+
+    printf("%d", number);
+}
+```
+
+그럼 결과로는 `-21억...`이 나오게 된다.
+
+이를 통해서 알 수 있듯이 **데이터 타입의 입력 가능 범위**를 넘어간다면 우리가 원하는 값이 나오지 않을 수 있다.
+
+#### 그래서 데이터 타입의 **정확한 범위를 아는 것**이 중요하다.
+
+<table style="border-collapse: collapse; width: 100%; height: 144px;" border="1" data-ke-align="alignLeft" data-ke-style="style13"><tbody><tr style="height: 18px;"><td style="width: 33.333333333333336%; text-align: center; height: 18px;"><b>Data Type</b></td><td style="width: 33.333333333333336%; text-align: center; height: 18px;"><b>크기</b></td><td style="width: 33.333333333333336%; text-align: center; height: 18px;"><b>범위</b></td></tr><tr style="height: 18px;"><td style="width: 33.333333333333336%; text-align: center; height: 18px;"><b>char</b></td><td style="width: 33.333333333333336%; height: 18px;">1 Byte</td><td style="width: 33.333333333333336%; height: 18px;">unsigned char<span style="color: #3c3c3c;"><span>&nbsp;</span>의 경우 0 부터 255,<span>&nbsp;</span></span>signed char<span style="color: #3c3c3c;"><span>&nbsp;</span>(그냥<span>&nbsp;</span></span>char<span style="color: #3c3c3c;">) 의 경우 -128 부터 127 까지</span></td></tr><tr style="height: 18px;"><td style="width: 33.333333333333336%; text-align: center; height: 18px;"><b>int</b></td><td style="width: 33.333333333333336%; height: 18px;">4 Byte</td><td style="width: 33.333333333333336%; height: 18px;"><span style="color: #3c3c3c;">4 바이트 일 경우<span>&nbsp;</span></span>signed int<span style="color: #3c3c3c;"><span>&nbsp;</span>의 경우 -2,147,483,648 에서 2,147,483,647 까지.<span>&nbsp;</span></span>unsigned int<span style="color: #3c3c3c;"><span>&nbsp;</span>의 경우 0 부터 4,294,967,295 까지</span></td></tr><tr style="height: 18px;"><td style="width: 33.333333333333336%; text-align: center; height: 18px;"><b>short</b></td><td style="width: 33.333333333333336%; height: 18px;">2 Byte</td><td style="width: 33.333333333333336%; height: 18px;"><span style="background-color: #f9f9f9; color: #3c3c3c;">2 바이트일 경우<span>&nbsp;</span></span>signed short<span style="background-color: #f9f9f9; color: #3c3c3c;"><span>&nbsp;</span>는 -32,768 에서 32,767.<span>&nbsp;</span></span>unsigned short<span style="background-color: #f9f9f9; color: #3c3c3c;"><span>&nbsp;</span>는 0 부터 65,535 까지</span></td></tr><tr style="height: 18px;"><td style="width: 33.333333333333336%; text-align: center; height: 18px;"><b>long</b></td><td style="width: 33.333333333333336%; height: 18px;">8 Byte</td><td style="width: 33.333333333333336%; height: 18px;">&nbsp;</td></tr><tr style="height: 18px;"><td style="width: 33.333333333333336%; text-align: center; height: 18px;"><b>long long</b></td><td style="width: 33.333333333333336%; height: 18px;">8 Byte</td><td style="width: 33.333333333333336%; height: 18px;"><span style="color: #000000;">8 바이트일 경우</span><span style="color: #000000;">&nbsp;</span>signed long long<span style="color: #000000;">&nbsp;</span><span style="color: #000000;">는 -9223372036854775808 부터 9223372036854775807 까지.</span><span style="color: #000000;">&nbsp;</span>unsigned long long<span style="color: #000000;">&nbsp;</span><span style="color: #000000;">는 0 에서 18446744073709551615 (대략</span><span style="color: #000000;">&nbsp;</span><span style="color: #000000;"><span><span><span>1.84×1019<span aria-hidden="true"><span><span>1</span><span>.</span><span>8</span><span>4</span><span>×</span></span><span><span>1</span><span><span>0</span><span><span><span><span><span><span><span><span>1</span><span>9</span></span></span></span></span></span></span></span></span></span></span></span></span></span>) 까지</span></td></tr><tr style="height: 18px;"><td style="width: 33.333333333333336%; text-align: center; height: 18px;"><b>float</b></td><td style="width: 33.333333333333336%; height: 18px;">4 Byte</td><td style="width: 33.333333333333336%; height: 18px;"><span style="color: #000000;"><span><span><span aria-hidden="true"><span><span>±</span><span>1</span><span>.</span><span>2</span><span>×</span></span><span><span>1</span><span><span>0</span><span><span><span><span><span><span><span><span>−</span><span>3</span><span>8</span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style="color: #000000;">&nbsp;</span><span style="color: #000000;">부터</span><span style="color: #000000;">&nbsp;</span><span style="color: #000000;"><span><span><span>±3.4×1034<span aria-hidden="true"><span><span>±</span><span>3</span><span>.</span><span>4</span><span>×</span></span><span><span>1</span><span><span>0</span><span><span><span><span><span><span><span><span>3</span><span>4</span></span></span></span></span></span></span></span></span></span></span></span></span></span><span>&nbsp;</span>까지. 정밀도는 대략 10진수로 6 자리 정도</span></td></tr><tr style="height: 18px;"><td style="width: 33.333333333333336%; text-align: center; height: 18px;"><b>double</b></td><td style="width: 33.333333333333336%; height: 18px;">8 Byte</td><td style="width: 33.333333333333336%; height: 18px;"><span style="color: #000000;"><span><span><span aria-hidden="true"><span><span>±</span><span>2</span><span>.</span><span>3</span><span>×</span></span><span><span>1</span><span><span>0</span><span><span><span><span><span><span><span><span>−</span><span>3</span><span>0</span><span>8</span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style="color: #000000;">&nbsp;</span><span style="color: #000000;">부터</span><span style="color: #000000;">&nbsp;</span><span style="color: #000000;"><span><span><span>±1.7×10308<span aria-hidden="true"><span><span>±</span><span>1</span><span>.</span><span>7</span><span>×</span></span><span><span>1</span><span><span>0</span><span><span><span><span><span><span><span><span>3</span><span>0</span><span>8</span></span></span></span></span></span></span></span></span></span></span></span></span></span><span>&nbsp;</span>까지. 정밀도는 대략 10진수로 15 자리 정도</span></td></tr></tbody></table>
+
+# 변수의 출력
+
+변수를 출력하기 위해서는 보통 `printf()` 함수를 사용한다.
+
+printf 는 formatting 한 출력을 하게되는데, **서식 지정자, format specifier** 을 통해서 **출력할 데이터를 어떤 형태로 출력할 것인지 지정할 수 있다**
+
+대표적인 서식 지정자로는 다음과 같은 것들이 존재한다.
+
+- `%d`
+  - 부호 있는 10진 정수
+- `%c`
+  - 하나의 문자
+- `%f`
+  - 고정 소수점으로 표현한 실수
+- `%s`
+  - 문자열
+- `%o`
+  - 부호 없는 8진수
+- `%x`
+  - 부호 없는 16진수
+- `%%`
+  - % 출력
+
+```c
+int main() {
+    int number = 127;
+
+    char alpha = 'c';
+
+    float weight = 90.4;
+    double height = 183.4;
+
+    printf("숫자 : %d \n", number);
+
+    printf("알파벳 : %c \n", alpha);
+
+    printf("체중 : %f \n", weight);
+
+    printf("키 : %f \n", height);
+
+    printf("문자열 : %d", "C 언어 배우기");
+}
+```

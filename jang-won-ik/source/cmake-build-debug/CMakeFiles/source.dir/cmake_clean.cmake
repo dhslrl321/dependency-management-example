@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/source.dir/keyword_1/variables.c.o"
   "CMakeFiles/source.dir/main.c.o"
   "source"
   "source.pdb"

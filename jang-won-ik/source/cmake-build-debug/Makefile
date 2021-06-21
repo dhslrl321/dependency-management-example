@@ -130,17 +130,57 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named source
+# Target rules for targets named main
 
 # Build rule for target.
-source: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source
-.PHONY : source
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-source/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/source.dir/build.make CMakeFiles/source.dir/build
-.PHONY : source/fast
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
+# Target rules for targets named variables
+
+# Build rule for target.
+variables: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 variables
+.PHONY : variables
+
+# fast build rule for target.
+variables/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/variables.dir/build.make CMakeFiles/variables.dir/build
+.PHONY : variables/fast
+
+keyword_1/variables.o: keyword_1/variables.c.o
+
+.PHONY : keyword_1/variables.o
+
+# target to build an object file
+keyword_1/variables.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/variables.dir/build.make CMakeFiles/variables.dir/keyword_1/variables.c.o
+.PHONY : keyword_1/variables.c.o
+
+keyword_1/variables.i: keyword_1/variables.c.i
+
+.PHONY : keyword_1/variables.i
+
+# target to preprocess a source file
+keyword_1/variables.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/variables.dir/build.make CMakeFiles/variables.dir/keyword_1/variables.c.i
+.PHONY : keyword_1/variables.c.i
+
+keyword_1/variables.s: keyword_1/variables.c.s
+
+.PHONY : keyword_1/variables.s
+
+# target to generate assembly for a file
+keyword_1/variables.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/variables.dir/build.make CMakeFiles/variables.dir/keyword_1/variables.c.s
+.PHONY : keyword_1/variables.c.s
 
 main.o: main.c.o
 
@@ -148,7 +188,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/source.dir/build.make CMakeFiles/source.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -157,7 +197,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/source.dir/build.make CMakeFiles/source.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -166,7 +206,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/source.dir/build.make CMakeFiles/source.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -177,7 +217,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... source"
+	@echo "... main"
+	@echo "... variables"
+	@echo "... keyword_1/variables.o"
+	@echo "... keyword_1/variables.i"
+	@echo "... keyword_1/variables.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

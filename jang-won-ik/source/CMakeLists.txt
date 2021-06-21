@@ -3,4 +3,5 @@ project(source C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(source main.c)
+add_executable(variables keyword_1/variables.c)
+add_executable(main main.c)
