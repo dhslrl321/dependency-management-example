@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named pointer1
+
+# Build rule for target.
+pointer1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pointer1
+.PHONY : pointer1
+
+# fast build rule for target.
+pointer1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pointer1.dir/build.make CMakeFiles/pointer1.dir/build
+.PHONY : pointer1/fast
+
+#=============================================================================
 # Target rules for targets named switch
 
 # Build rule for target.
@@ -262,6 +275,33 @@ keyword_1/variables.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/variables.dir/build.make CMakeFiles/variables.dir/keyword_1/variables.c.s
 .PHONY : keyword_1/variables.c.s
 
+keyword_3/pointer1.o: keyword_3/pointer1.c.o
+
+.PHONY : keyword_3/pointer1.o
+
+# target to build an object file
+keyword_3/pointer1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pointer1.dir/build.make CMakeFiles/pointer1.dir/keyword_3/pointer1.c.o
+.PHONY : keyword_3/pointer1.c.o
+
+keyword_3/pointer1.i: keyword_3/pointer1.c.i
+
+.PHONY : keyword_3/pointer1.i
+
+# target to preprocess a source file
+keyword_3/pointer1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pointer1.dir/build.make CMakeFiles/pointer1.dir/keyword_3/pointer1.c.i
+.PHONY : keyword_3/pointer1.c.i
+
+keyword_3/pointer1.s: keyword_3/pointer1.c.s
+
+.PHONY : keyword_3/pointer1.s
+
+# target to generate assembly for a file
+keyword_3/pointer1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pointer1.dir/build.make CMakeFiles/pointer1.dir/keyword_3/pointer1.c.s
+.PHONY : keyword_3/pointer1.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -299,6 +339,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... condition"
 	@echo "... main"
+	@echo "... pointer1"
 	@echo "... switch"
 	@echo "... variables"
 	@echo "... keyword_1/condition.o"
@@ -310,6 +351,9 @@ help:
 	@echo "... keyword_1/variables.o"
 	@echo "... keyword_1/variables.i"
 	@echo "... keyword_1/variables.s"
+	@echo "... keyword_3/pointer1.o"
+	@echo "... keyword_3/pointer1.i"
+	@echo "... keyword_3/pointer1.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
