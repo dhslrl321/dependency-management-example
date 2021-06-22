@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <assert.h>
 
 int main() {
     int number = 16;
@@ -19,4 +20,15 @@ int main() {
     printf("--pointer 의 주소값 출력-- \n");
     printf("%#010x \n", &pointer);
     printf("\n\n");
+
+    // 참조 연산자의 사용
+    int number2 = 100;
+
+    int *pointer2 = &number2;
+
+    assert(pointer2 == &number2);
+
+    *pointer2 = 200;
+    assert(number2 == 200);
+    assert(*pointer2 == 200);
 }

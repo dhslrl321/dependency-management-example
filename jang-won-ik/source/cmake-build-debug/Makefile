@@ -130,6 +130,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named array_pointer
+
+# Build rule for target.
+array_pointer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 array_pointer
+.PHONY : array_pointer
+
+# fast build rule for target.
+array_pointer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer.dir/build.make CMakeFiles/array_pointer.dir/build
+.PHONY : array_pointer/fast
+
+#=============================================================================
+# Target rules for targets named array2
+
+# Build rule for target.
+array2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 array2
+.PHONY : array2
+
+# fast build rule for target.
+array2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array2.dir/build.make CMakeFiles/array2.dir/build
+.PHONY : array2/fast
+
+#=============================================================================
+# Target rules for targets named array1
+
+# Build rule for target.
+array1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 array1
+.PHONY : array1
+
+# fast build rule for target.
+array1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array1.dir/build.make CMakeFiles/array1.dir/build
+.PHONY : array1/fast
+
+#=============================================================================
 # Target rules for targets named pointer1
 
 # Build rule for target.
@@ -275,6 +314,87 @@ keyword_1/variables.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/variables.dir/build.make CMakeFiles/variables.dir/keyword_1/variables.c.s
 .PHONY : keyword_1/variables.c.s
 
+keyword_2/array1.o: keyword_2/array1.c.o
+
+.PHONY : keyword_2/array1.o
+
+# target to build an object file
+keyword_2/array1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array1.dir/build.make CMakeFiles/array1.dir/keyword_2/array1.c.o
+.PHONY : keyword_2/array1.c.o
+
+keyword_2/array1.i: keyword_2/array1.c.i
+
+.PHONY : keyword_2/array1.i
+
+# target to preprocess a source file
+keyword_2/array1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array1.dir/build.make CMakeFiles/array1.dir/keyword_2/array1.c.i
+.PHONY : keyword_2/array1.c.i
+
+keyword_2/array1.s: keyword_2/array1.c.s
+
+.PHONY : keyword_2/array1.s
+
+# target to generate assembly for a file
+keyword_2/array1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array1.dir/build.make CMakeFiles/array1.dir/keyword_2/array1.c.s
+.PHONY : keyword_2/array1.c.s
+
+keyword_2/array2.o: keyword_2/array2.c.o
+
+.PHONY : keyword_2/array2.o
+
+# target to build an object file
+keyword_2/array2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array2.dir/build.make CMakeFiles/array2.dir/keyword_2/array2.c.o
+.PHONY : keyword_2/array2.c.o
+
+keyword_2/array2.i: keyword_2/array2.c.i
+
+.PHONY : keyword_2/array2.i
+
+# target to preprocess a source file
+keyword_2/array2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array2.dir/build.make CMakeFiles/array2.dir/keyword_2/array2.c.i
+.PHONY : keyword_2/array2.c.i
+
+keyword_2/array2.s: keyword_2/array2.c.s
+
+.PHONY : keyword_2/array2.s
+
+# target to generate assembly for a file
+keyword_2/array2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array2.dir/build.make CMakeFiles/array2.dir/keyword_2/array2.c.s
+.PHONY : keyword_2/array2.c.s
+
+keyword_3/array_pointer.o: keyword_3/array_pointer.c.o
+
+.PHONY : keyword_3/array_pointer.o
+
+# target to build an object file
+keyword_3/array_pointer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer.dir/build.make CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.o
+.PHONY : keyword_3/array_pointer.c.o
+
+keyword_3/array_pointer.i: keyword_3/array_pointer.c.i
+
+.PHONY : keyword_3/array_pointer.i
+
+# target to preprocess a source file
+keyword_3/array_pointer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer.dir/build.make CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.i
+.PHONY : keyword_3/array_pointer.c.i
+
+keyword_3/array_pointer.s: keyword_3/array_pointer.c.s
+
+.PHONY : keyword_3/array_pointer.s
+
+# target to generate assembly for a file
+keyword_3/array_pointer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer.dir/build.make CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.s
+.PHONY : keyword_3/array_pointer.c.s
+
 keyword_3/pointer1.o: keyword_3/pointer1.c.o
 
 .PHONY : keyword_3/pointer1.o
@@ -337,6 +457,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... array1"
+	@echo "... array2"
+	@echo "... array_pointer"
 	@echo "... condition"
 	@echo "... main"
 	@echo "... pointer1"
@@ -351,6 +474,15 @@ help:
 	@echo "... keyword_1/variables.o"
 	@echo "... keyword_1/variables.i"
 	@echo "... keyword_1/variables.s"
+	@echo "... keyword_2/array1.o"
+	@echo "... keyword_2/array1.i"
+	@echo "... keyword_2/array1.s"
+	@echo "... keyword_2/array2.o"
+	@echo "... keyword_2/array2.i"
+	@echo "... keyword_2/array2.s"
+	@echo "... keyword_3/array_pointer.o"
+	@echo "... keyword_3/array_pointer.i"
+	@echo "... keyword_3/array_pointer.s"
 	@echo "... keyword_3/pointer1.o"
 	@echo "... keyword_3/pointer1.i"
 	@echo "... keyword_3/pointer1.s"

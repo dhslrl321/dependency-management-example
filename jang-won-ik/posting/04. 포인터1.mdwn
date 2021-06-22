@@ -35,10 +35,13 @@ int main() {
 
 ```c
 #include <stdio.h>
+#include <assert.h>
 
 int main() {
     int number = 10;
     int *pointer = &number;
+
+    assert(pointer == number);
 }
 ```
 
@@ -46,3 +49,33 @@ int main() {
 
 - `&` 특정한 변순의 선두 번지
 - `*` 연산자는 포인터 변수에 저장된 선두 번지를 참조해 저장된 값
+
+# `*` 의 사용 위치에 따른 역할
+
+- 정의될 때 사용
+  - 참조 연산자
+  - 메모리 주소를 저장할 수 있는 변수 할당
+- 수식에서 사용
+  - 역참조 연산자
+  - 변수에 대한 역참조
+  - dereferencing
+
+```c
+#include <stdio.h>
+#include <assert.h>
+
+int main() {
+    int number = 10;
+    int *pointer = &number;
+
+    *pointer = 20;
+
+    assert(number == 20);
+    assert(number == *pointer);
+}
+```
+
+# Segmentation Fault 에러
+
+- 초기화 되지 않은 포인터 변수에 역참조를 이용해서 새로운 값을 할당하려 할 때
+  - 만약 초기화를 안 하면 쓰래기 값(랜덤한 주소)에 새로운 값을 할당하려 하기 때문에 이미 다른 시스템이 점유중이면 큰일나므로 에러를 방출
