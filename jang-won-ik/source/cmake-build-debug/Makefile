@@ -75,17 +75,6 @@ CMAKE_BINARY_DIR = /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-w
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -96,6 +85,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -130,6 +130,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named switch
+
+# Build rule for target.
+switch: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 switch
+.PHONY : switch
+
+# fast build rule for target.
+switch/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/switch.dir/build.make CMakeFiles/switch.dir/build
+.PHONY : switch/fast
+
+#=============================================================================
+# Target rules for targets named condition
+
+# Build rule for target.
+condition: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 condition
+.PHONY : condition
+
+# fast build rule for target.
+condition/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/condition.dir/build.make CMakeFiles/condition.dir/build
+.PHONY : condition/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -154,6 +180,60 @@ variables: cmake_check_build_system
 variables/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/variables.dir/build.make CMakeFiles/variables.dir/build
 .PHONY : variables/fast
+
+keyword_1/condition.o: keyword_1/condition.c.o
+
+.PHONY : keyword_1/condition.o
+
+# target to build an object file
+keyword_1/condition.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/condition.dir/build.make CMakeFiles/condition.dir/keyword_1/condition.c.o
+.PHONY : keyword_1/condition.c.o
+
+keyword_1/condition.i: keyword_1/condition.c.i
+
+.PHONY : keyword_1/condition.i
+
+# target to preprocess a source file
+keyword_1/condition.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/condition.dir/build.make CMakeFiles/condition.dir/keyword_1/condition.c.i
+.PHONY : keyword_1/condition.c.i
+
+keyword_1/condition.s: keyword_1/condition.c.s
+
+.PHONY : keyword_1/condition.s
+
+# target to generate assembly for a file
+keyword_1/condition.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/condition.dir/build.make CMakeFiles/condition.dir/keyword_1/condition.c.s
+.PHONY : keyword_1/condition.c.s
+
+keyword_1/switch.o: keyword_1/switch.c.o
+
+.PHONY : keyword_1/switch.o
+
+# target to build an object file
+keyword_1/switch.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/switch.dir/build.make CMakeFiles/switch.dir/keyword_1/switch.c.o
+.PHONY : keyword_1/switch.c.o
+
+keyword_1/switch.i: keyword_1/switch.c.i
+
+.PHONY : keyword_1/switch.i
+
+# target to preprocess a source file
+keyword_1/switch.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/switch.dir/build.make CMakeFiles/switch.dir/keyword_1/switch.c.i
+.PHONY : keyword_1/switch.c.i
+
+keyword_1/switch.s: keyword_1/switch.c.s
+
+.PHONY : keyword_1/switch.s
+
+# target to generate assembly for a file
+keyword_1/switch.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/switch.dir/build.make CMakeFiles/switch.dir/keyword_1/switch.c.s
+.PHONY : keyword_1/switch.c.s
 
 keyword_1/variables.o: keyword_1/variables.c.o
 
@@ -217,8 +297,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... condition"
 	@echo "... main"
+	@echo "... switch"
 	@echo "... variables"
+	@echo "... keyword_1/condition.o"
+	@echo "... keyword_1/condition.i"
+	@echo "... keyword_1/condition.s"
+	@echo "... keyword_1/switch.o"
+	@echo "... keyword_1/switch.i"
+	@echo "... keyword_1/switch.s"
 	@echo "... keyword_1/variables.o"
 	@echo "... keyword_1/variables.i"
 	@echo "... keyword_1/variables.s"
