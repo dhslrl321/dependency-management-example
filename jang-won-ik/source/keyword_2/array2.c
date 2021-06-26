@@ -13,4 +13,5 @@ int main() {
 
     assert(array[0] == 10);
     assert(array[1] == 20);
+    return 0;
 }

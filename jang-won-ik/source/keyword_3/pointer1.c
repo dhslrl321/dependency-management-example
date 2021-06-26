@@ -31,4 +31,5 @@ int main() {
     *pointer2 = 200;
     assert(number2 == 200);
     assert(*pointer2 == 200);
+    return 0;
 }

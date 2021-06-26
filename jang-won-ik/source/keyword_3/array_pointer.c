@@ -16,4 +16,6 @@ int main() {
 
     assert(&arr[3] == (pointer + 3));
     assert(arr[3] == *(pointer + 3));
+
+    return 0;
 }

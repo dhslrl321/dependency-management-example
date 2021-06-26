@@ -13,4 +13,6 @@ int main() {
     printf("체중 : %f \n", weight);
     printf("키 : %f \n", height);
     printf("문자열 : %d", "C 언어 배우기");
+
+    return 0;
 }

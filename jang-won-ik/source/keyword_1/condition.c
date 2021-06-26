@@ -24,4 +24,5 @@ int main() {
     }else {
         printf("대상 학년이 아닙니다.");
     }
+    return 0;
 }

@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named array_2d_pointer
+
+# Build rule for target.
+array_2d_pointer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 array_2d_pointer
+.PHONY : array_2d_pointer
+
+# fast build rule for target.
+array_2d_pointer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer.dir/build.make CMakeFiles/array_2d_pointer.dir/build
+.PHONY : array_2d_pointer/fast
+
+#=============================================================================
 # Target rules for targets named array_pointer
 
 # Build rule for target.
@@ -368,6 +381,33 @@ keyword_2/array2.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/array2.dir/build.make CMakeFiles/array2.dir/keyword_2/array2.c.s
 .PHONY : keyword_2/array2.c.s
 
+keyword_3/array_2d_pointer.o: keyword_3/array_2d_pointer.c.o
+
+.PHONY : keyword_3/array_2d_pointer.o
+
+# target to build an object file
+keyword_3/array_2d_pointer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer.dir/build.make CMakeFiles/array_2d_pointer.dir/keyword_3/array_2d_pointer.c.o
+.PHONY : keyword_3/array_2d_pointer.c.o
+
+keyword_3/array_2d_pointer.i: keyword_3/array_2d_pointer.c.i
+
+.PHONY : keyword_3/array_2d_pointer.i
+
+# target to preprocess a source file
+keyword_3/array_2d_pointer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer.dir/build.make CMakeFiles/array_2d_pointer.dir/keyword_3/array_2d_pointer.c.i
+.PHONY : keyword_3/array_2d_pointer.c.i
+
+keyword_3/array_2d_pointer.s: keyword_3/array_2d_pointer.c.s
+
+.PHONY : keyword_3/array_2d_pointer.s
+
+# target to generate assembly for a file
+keyword_3/array_2d_pointer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer.dir/build.make CMakeFiles/array_2d_pointer.dir/keyword_3/array_2d_pointer.c.s
+.PHONY : keyword_3/array_2d_pointer.c.s
+
 keyword_3/array_pointer.o: keyword_3/array_pointer.c.o
 
 .PHONY : keyword_3/array_pointer.o
@@ -459,6 +499,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... array1"
 	@echo "... array2"
+	@echo "... array_2d_pointer"
 	@echo "... array_pointer"
 	@echo "... condition"
 	@echo "... main"
@@ -480,6 +521,9 @@ help:
 	@echo "... keyword_2/array2.o"
 	@echo "... keyword_2/array2.i"
 	@echo "... keyword_2/array2.s"
+	@echo "... keyword_3/array_2d_pointer.o"
+	@echo "... keyword_3/array_2d_pointer.i"
+	@echo "... keyword_3/array_2d_pointer.s"
 	@echo "... keyword_3/array_pointer.o"
 	@echo "... keyword_3/array_pointer.i"
 	@echo "... keyword_3/array_pointer.s"
