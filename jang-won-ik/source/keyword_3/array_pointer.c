@@ -5,6 +5,8 @@ int main() {
 
     int *pointer = arr;
 
+    assert(arr[0] == *pointer);
+
     assert(&arr[0] == (pointer + 0));
     assert(arr[0] == *(pointer + 0));
 
