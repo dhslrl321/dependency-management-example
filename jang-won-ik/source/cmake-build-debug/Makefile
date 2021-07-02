@@ -75,17 +75,6 @@ CMAKE_BINARY_DIR = /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-w
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -96,6 +85,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -130,6 +130,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named switch
+
+# Build rule for target.
+switch: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 switch
+.PHONY : switch
+
+# fast build rule for target.
+switch/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/switch.dir/build.make CMakeFiles/switch.dir/build
+.PHONY : switch/fast
+
+#=============================================================================
+# Target rules for targets named array_pointer_2
+
+# Build rule for target.
+array_pointer_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 array_pointer_2
+.PHONY : array_pointer_2
+
+# fast build rule for target.
+array_pointer_2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer_2.dir/build.make CMakeFiles/array_pointer_2.dir/build
+.PHONY : array_pointer_2/fast
+
+#=============================================================================
 # Target rules for targets named array_2d_pointer
 
 # Build rule for target.
@@ -141,6 +167,19 @@ array_2d_pointer: cmake_check_build_system
 array_2d_pointer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer.dir/build.make CMakeFiles/array_2d_pointer.dir/build
 .PHONY : array_2d_pointer/fast
+
+#=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 #=============================================================================
 # Target rules for targets named array_pointer
@@ -195,19 +234,6 @@ pointer1/fast:
 .PHONY : pointer1/fast
 
 #=============================================================================
-# Target rules for targets named switch
-
-# Build rule for target.
-switch: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 switch
-.PHONY : switch
-
-# fast build rule for target.
-switch/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/switch.dir/build.make CMakeFiles/switch.dir/build
-.PHONY : switch/fast
-
-#=============================================================================
 # Target rules for targets named condition
 
 # Build rule for target.
@@ -219,19 +245,6 @@ condition: cmake_check_build_system
 condition/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/condition.dir/build.make CMakeFiles/condition.dir/build
 .PHONY : condition/fast
-
-#=============================================================================
-# Target rules for targets named main
-
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
 
 #=============================================================================
 # Target rules for targets named variables
@@ -435,6 +448,33 @@ keyword_3/array_pointer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer.dir/build.make CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.s
 .PHONY : keyword_3/array_pointer.c.s
 
+keyword_3/array_pointer_2.o: keyword_3/array_pointer_2.c.o
+
+.PHONY : keyword_3/array_pointer_2.o
+
+# target to build an object file
+keyword_3/array_pointer_2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer_2.dir/build.make CMakeFiles/array_pointer_2.dir/keyword_3/array_pointer_2.c.o
+.PHONY : keyword_3/array_pointer_2.c.o
+
+keyword_3/array_pointer_2.i: keyword_3/array_pointer_2.c.i
+
+.PHONY : keyword_3/array_pointer_2.i
+
+# target to preprocess a source file
+keyword_3/array_pointer_2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer_2.dir/build.make CMakeFiles/array_pointer_2.dir/keyword_3/array_pointer_2.c.i
+.PHONY : keyword_3/array_pointer_2.c.i
+
+keyword_3/array_pointer_2.s: keyword_3/array_pointer_2.c.s
+
+.PHONY : keyword_3/array_pointer_2.s
+
+# target to generate assembly for a file
+keyword_3/array_pointer_2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer_2.dir/build.make CMakeFiles/array_pointer_2.dir/keyword_3/array_pointer_2.c.s
+.PHONY : keyword_3/array_pointer_2.c.s
+
 keyword_3/pointer1.o: keyword_3/pointer1.c.o
 
 .PHONY : keyword_3/pointer1.o
@@ -501,6 +541,7 @@ help:
 	@echo "... array2"
 	@echo "... array_2d_pointer"
 	@echo "... array_pointer"
+	@echo "... array_pointer_2"
 	@echo "... condition"
 	@echo "... main"
 	@echo "... pointer1"
@@ -527,6 +568,9 @@ help:
 	@echo "... keyword_3/array_pointer.o"
 	@echo "... keyword_3/array_pointer.i"
 	@echo "... keyword_3/array_pointer.s"
+	@echo "... keyword_3/array_pointer_2.o"
+	@echo "... keyword_3/array_pointer_2.i"
+	@echo "... keyword_3/array_pointer_2.s"
 	@echo "... keyword_3/pointer1.o"
 	@echo "... keyword_3/pointer1.i"
 	@echo "... keyword_3/pointer1.s"

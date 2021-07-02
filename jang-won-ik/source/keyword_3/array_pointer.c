@@ -1,9 +1,14 @@
 #include <assert.h>
+#include <stdio.h>
 
 int main() {
     int arr[] = {11, 22, 33, 44};
 
     int *pointer = arr;
+
+    int *pointer_with_invalid = &arr;
+
+    printf("%x", pointer_with_invalid);
 
     assert(arr[0] == *pointer);
 
