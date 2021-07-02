@@ -1,11 +1,28 @@
 #include <assert.h>
 
-int main() {
-    int student[] = {88, 89, 73, 65, 99, 100};
+int top = 0;
 
-    assert(student[0] == 88); // 첫 번째 원소 0
-    assert(student[3] == 65); // n 번째 원소 (찾으려는 원소 순서 - 1)
-    assert(student[5] == 100); // 마지막 원소 (배열 길이 - 1)
+void push(int data, int array[]) {
+    array[top++] = data;
+}
+
+int pop(int array[]) {
+    return array[--top];
+}
+
+int main() {
+
+    int stack[4];
+
+    push(7, stack);
+
+    assert(stack[0] == 7);
+
+    int first = pop(stack);
+
+    assert(first == 1);
 
     return 0;
 }
+
+// assignment : 스택이 비어있는지, 꽉 차있는지

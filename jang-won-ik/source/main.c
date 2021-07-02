@@ -1,6 +1,9 @@
-#include <stdio.h>
+#include <assert.h>
 
 int main() {
-    printf("Hello, World!\n");
+
+    int number = 100;
+
+    assert(number == 99); // 반증문
     return 0;
 }
