@@ -16,8 +16,6 @@
 
 # 📕 학습 목표 및 스터디 자료
 
-> BoB 10기 top 30 을 위해서 C와 C++ 을 완벽 정복한다
-
 ### 기본 교재
 
 - [윤성우의 열혈 C 프로그래밍](http://book.interpark.com/product/BookDisplay.do?_method=detail&sc.prdNo=206832627&gclid=CjwKCAjwzruGBhBAEiwAUqMR8KL5jmoaV4rdoBQL6avUdtpsbhHlpCxJq5tK4zsJgyXt970hmBg9FRoCWikQAvD_BwE)
