@@ -247,6 +247,19 @@ condition/fast:
 .PHONY : condition/fast
 
 #=============================================================================
+# Target rules for targets named array_2d_pointer_2
+
+# Build rule for target.
+array_2d_pointer_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 array_2d_pointer_2
+.PHONY : array_2d_pointer_2
+
+# fast build rule for target.
+array_2d_pointer_2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer_2.dir/build.make CMakeFiles/array_2d_pointer_2.dir/build
+.PHONY : array_2d_pointer_2/fast
+
+#=============================================================================
 # Target rules for targets named variables
 
 # Build rule for target.
@@ -421,6 +434,33 @@ keyword_3/array_2d_pointer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer.dir/build.make CMakeFiles/array_2d_pointer.dir/keyword_3/array_2d_pointer.c.s
 .PHONY : keyword_3/array_2d_pointer.c.s
 
+keyword_3/array_2d_pointer_2.o: keyword_3/array_2d_pointer_2.c.o
+
+.PHONY : keyword_3/array_2d_pointer_2.o
+
+# target to build an object file
+keyword_3/array_2d_pointer_2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer_2.dir/build.make CMakeFiles/array_2d_pointer_2.dir/keyword_3/array_2d_pointer_2.c.o
+.PHONY : keyword_3/array_2d_pointer_2.c.o
+
+keyword_3/array_2d_pointer_2.i: keyword_3/array_2d_pointer_2.c.i
+
+.PHONY : keyword_3/array_2d_pointer_2.i
+
+# target to preprocess a source file
+keyword_3/array_2d_pointer_2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer_2.dir/build.make CMakeFiles/array_2d_pointer_2.dir/keyword_3/array_2d_pointer_2.c.i
+.PHONY : keyword_3/array_2d_pointer_2.c.i
+
+keyword_3/array_2d_pointer_2.s: keyword_3/array_2d_pointer_2.c.s
+
+.PHONY : keyword_3/array_2d_pointer_2.s
+
+# target to generate assembly for a file
+keyword_3/array_2d_pointer_2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer_2.dir/build.make CMakeFiles/array_2d_pointer_2.dir/keyword_3/array_2d_pointer_2.c.s
+.PHONY : keyword_3/array_2d_pointer_2.c.s
+
 keyword_3/array_pointer.o: keyword_3/array_pointer.c.o
 
 .PHONY : keyword_3/array_pointer.o
@@ -540,6 +580,7 @@ help:
 	@echo "... array1"
 	@echo "... array2"
 	@echo "... array_2d_pointer"
+	@echo "... array_2d_pointer_2"
 	@echo "... array_pointer"
 	@echo "... array_pointer_2"
 	@echo "... condition"
@@ -565,6 +606,9 @@ help:
 	@echo "... keyword_3/array_2d_pointer.o"
 	@echo "... keyword_3/array_2d_pointer.i"
 	@echo "... keyword_3/array_2d_pointer.s"
+	@echo "... keyword_3/array_2d_pointer_2.o"
+	@echo "... keyword_3/array_2d_pointer_2.i"
+	@echo "... keyword_3/array_2d_pointer_2.s"
 	@echo "... keyword_3/array_pointer.o"
 	@echo "... keyword_3/array_pointer.i"
 	@echo "... keyword_3/array_pointer.s"

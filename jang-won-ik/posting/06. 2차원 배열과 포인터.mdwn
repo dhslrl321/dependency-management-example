@@ -1,0 +1,113 @@
+[##_Image|kage@woxWE/btq7SMNlXab/bzNouN2jeIS0xf46Eeb0R0/img.png|alignCenter|data-origin-width="960" data-origin-height="496" width="641" height="331" data-ke-mobilestyle="widthOrigin"|||_##]
+
+# 2차원 배열의 형태
+
+우리가 2차원 배열과 포인터에 대한 상관관계를 파악하고 조작하기 위해서는 **2차원 배열이 메모리에 어떻게 저장되는지 알아야 한다.**
+
+다음과 같은 배열이 존재한다고 가정해보자.
+
+```c
+int arr[3][2] = {
+    {11, 22},
+    {33, 44},
+    {55, 66},
+};
+```
+
+그럼 메모리에 다음과 같이 저장될 것이라는 그림을 많이 봐 왔다
+
+[##_Image|kage@J9brv/btq8HecmHSA/0K8jHcWYoQNjeh5c10mX8K/img.png|alignCenter|data-origin-width="266" data-origin-height="502" width="231" height="436" data-ke-mobilestyle="widthOrigin"|||_##]
+
+하지만 정확이 말 한다면, 이 그림은 조금 이상하다.
+
+2차원 배열이라 우리가 보기 쉽게 구분해놓은 것일 뿐이지 저렇게 2차원으로 저장되지 않는다.
+
+#### 메모리는 **연속적인 특성 덕분에** 1차원으로 보는 것이 더 올바르다
+
+그럼 더 올바른 구조를 그려보자면 다음과 같다.
+
+[##_Image|kage@bq10df/btq8H41oWGT/voXc7C9JSLLLbGRVR7x6H1/img.png|alignCenter|data-origin-width="716" data-origin-height="601" width="589" height="494" data-ke-mobilestyle="widthOrigin"|||_##]
+
+이렇게 먼저 머리에 메모리 구조를 이해하고 있어야 **포인터와 2차원 배열의 상관관계**에 대해서 알 수 있다.
+
+# 2차원 배열의 포인터
+
+포인터 변수에 2차원 배열을 할당하기 위해서는 `int (*pointer)[행의 수];` 형태로 정의해야 한다.
+
+바로 코드로 확인해보자
+
+```c
+#include <stdio.h>
+
+int main() {
+
+    int arr[3][2] = {
+            {11, 22},
+            {33, 44},
+            {55, 66},
+    };
+
+    int (*pointer)[2]; // 행을 2로 하는 2차원 배열 포인터 하나 생성
+
+    pointer = arr;
+
+    return 0;
+}
+```
+
+여기서 괄호의 역할이 많이 중요하다.
+
+만약 괄호를 생략하고 `*pointer[2]` 라고 하면 이는 포인터 **배열**을 생성하겠다는 뜻으로, int 형 포인터 2개가 연속적으로 저장되는 배열이 생성되게 된다.
+
+## 1차원 배열로 생각하기
+
+2차원 배열을 포인터로 다루기 위해서 우선 **1차원 배열이 연속적으로 존재한다고 가정해보자**
+
+그럼 위의 코드에서는 배열 size 가 2인 배열 3개가 연속적으로 존재한다고 이해할 수 있다.
+
+[##_Image|kage@baxwH2/btq8JkbUnXw/cmIk95CJ89OS7lpsJGt3zK/img.png|alignCenter|data-origin-width="418" data-origin-height="526" width="347" height="437" data-ke-mobilestyle="widthOrigin"|||_##]
+
+그럼 2차원 배열에서도 역시 1차원 배열의 개념을 함께 이용할 수 있다.
+
+결국 포인터를 이용해서 이들 각각의 주소로 접근한다면 다음과 같은 방식으로 접근할 수 있다
+
+- `arr[0]` : `*pointer`
+  - pointer 변수가 가리키는 주소
+- `arr[1]` : `*(pointer + 1)`
+  - pointer 변수가 가리키는 주소 + 4 byte
+- `arr[2]` : `*(pointer + 2)`
+  - pointer 변수가 가리키는 주소 + 8 byte
+
+[##_Image|kage@c7ZKx9/btq8IgnuHlA/iq8eKA8cZaIlBXk6CBis60/img.png|alignCenter|data-origin-width="607" data-origin-height="504" width="532" height="442" data-ke-mobilestyle="widthOrigin"|||_##]
+
+## 2차원 배열 포인터로 배열 주소 접근하기
+
+아까 앞에서 2차원 배열은 **연속적인 메모리에 할당**된다고 해서 1차원 배열처럼 일열로 보여줬지만 가독성을 위해서 2차원 구조로 메모리에 존재한다고 가정해보자.
+
+그럼 **지난 시간에 배웠던 배열과 포인터**의 관계로 배열의 모든 요소에 접근할 수 있다.
+
+```c
+#include <assert.h>
+
+int main() {
+
+    int arr[3][2] = {
+            {11, 22},
+            {33, 44},
+            {55, 66},
+    };
+
+    int (*pointer)[2] = arr;
+
+    assert(&arr[0][0] == *pointer);
+    assert(&arr[0][1] == *pointer + 1);
+
+    assert(&arr[1][0] == *(pointer + 1));
+    assert(&arr[1][1] == *(pointer + 1) + 1);
+
+    assert(&arr[2][0] == *(pointer + 2));
+    assert(&arr[2][1] == *(pointer + 2) + 1);
+
+    return 0;
+}
+```
