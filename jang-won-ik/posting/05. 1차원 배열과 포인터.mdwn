@@ -89,3 +89,60 @@ pointer 변수에 정수를 더한다는 것은 포인터 변수의 데이터 �
 지난 시간에 포인터를 이용할 때 사용하는 **참조 연산자** `*` 에 대해서 알아보았다.
 
 참조 연산자가 만약 변수명 앞에 사용된다면 **해당 메모리에 존재하는 값을 반환** 한다고 했으니 우리는 참조 연산자를 이용해서 배열의 모든 값을 취할 수 있게 되었다.
+
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[] = {11, 22, 33, 44};
+
+    int *pointer = arr;
+
+    printf("%d", *pointer); // pointer 가 가리키는 arr 의 주소의 첫 번째 요소의 값인 11 이 출력됨
+
+    return 0;
+}
+```
+
+우리는 앞서서 **(pointer + 정수)** 의 의미를 이용해서 **모든 배열 요소의 값**에 접근할 수 있게 된다.
+
+### 주의하자
+
+우리는 **pointer + 정수** 를 이용해서 모든 배열 요소의 값에 접근할 수 있다고 했는데, pointer + 정수 가 컴파일러에게 명확하게 전달되지 않으면!
+
+즉 **괄호로 적절하게 묶지 않으면** 문제가 발생한다.
+
+`*pointer + 1` 과 `*(pointer + 1)` 은 아주 큰 차이가 있다는 소리다.
+
+- `*pointer + 1`
+  - pointer 변수가 가리키는 주소의 **값에 정수 1을 더한 값**
+- `*(pointer + 1)`
+  - pointer 변수가 가리키는 주소에서 4byte 만큼 **이동한 주소에 저장된 값**
+
+그래서 우리가 앞서 배운 **(pointer + 정수)**의 개념과 `*` 연산자의 개념을 모두 적용하면 다음과 같은 코드를 이해할 수 있게 된다.
+
+```c
+#include <assert.h>
+
+int main() {
+    int arr[] = {11, 22, 33, 44};
+
+    int *pointer = arr;
+
+    assert(arr[0] == *pointer);
+
+    assert(&arr[0] == (pointer + 0));
+    assert(arr[0] == *(pointer + 0));
+
+    assert(&arr[1] == (pointer + 1));
+    assert(arr[1] == *(pointer + 1));
+
+    assert(&arr[2] == (pointer + 2));
+    assert(arr[2] == *(pointer + 2));
+
+    assert(&arr[3] == (pointer + 3));
+    assert(arr[3] == *(pointer + 3));
+
+    return 0;
+}
+```

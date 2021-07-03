@@ -84,6 +84,7 @@
   - **포인터**
     - 키워드
     - [블로그 정리 - 포인터와 연산자](https://wonit.tistory.com/525)
+    - [블로그 정리 - 1차원 배열과 포인터](https://wonit.tistory.com/526)
       - `포인터`
       - `다양한 포인터 연산자`
       - `이중 포인터, double pointer`

@@ -6,10 +6,7 @@ int main() {
 
     int *pointer = arr;
 
-    printf("%010x", pointer + 0);
-    printf("%010x", pointer + 1);
-    printf("%010x", pointer + 2);
-    printf("%010x", pointer + 3);
+    printf("%d", *pointer);
 
     return 0;
 }
