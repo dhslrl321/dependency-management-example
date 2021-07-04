@@ -76,27 +76,27 @@ include CMakeFiles/string.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/string.dir/flags.make
 
-CMakeFiles/string.dir/keyword_4/string.c.o: CMakeFiles/string.dir/flags.make
-CMakeFiles/string.dir/keyword_4/string.c.o: ../keyword_4/string.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/string.dir/keyword_4/string.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/string.dir/keyword_4/string.c.o -c /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_4/string.c
+CMakeFiles/string.dir/keyword_4/malloc_use.c.o: CMakeFiles/string.dir/flags.make
+CMakeFiles/string.dir/keyword_4/malloc_use.c.o: ../keyword_4/malloc_use.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/string.dir/keyword_4/malloc_use.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/string.dir/keyword_4/malloc_use.c.o -c /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_4/malloc_use.c
 
-CMakeFiles/string.dir/keyword_4/string.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/string.dir/keyword_4/string.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_4/string.c > CMakeFiles/string.dir/keyword_4/string.c.i
+CMakeFiles/string.dir/keyword_4/malloc_use.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/string.dir/keyword_4/malloc_use.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_4/malloc_use.c > CMakeFiles/string.dir/keyword_4/malloc_use.c.i
 
-CMakeFiles/string.dir/keyword_4/string.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/string.dir/keyword_4/string.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_4/string.c -o CMakeFiles/string.dir/keyword_4/string.c.s
+CMakeFiles/string.dir/keyword_4/malloc_use.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/string.dir/keyword_4/malloc_use.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_4/malloc_use.c -o CMakeFiles/string.dir/keyword_4/malloc_use.c.s
 
 # Object files for target string
 string_OBJECTS = \
-"CMakeFiles/string.dir/keyword_4/string.c.o"
+"CMakeFiles/string.dir/keyword_4/malloc_use.c.o"
 
 # External object files for target string
 string_EXTERNAL_OBJECTS =
 
-string: CMakeFiles/string.dir/keyword_4/string.c.o
+string: CMakeFiles/string.dir/keyword_4/malloc_use.c.o
 string: CMakeFiles/string.dir/build.make
 string: CMakeFiles/string.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable string"

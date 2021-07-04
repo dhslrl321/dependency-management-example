@@ -568,32 +568,32 @@ keyword_3/pointer1.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pointer1.dir/build.make CMakeFiles/pointer1.dir/keyword_3/pointer1.c.s
 .PHONY : keyword_3/pointer1.c.s
 
-keyword_4/string.o: keyword_4/string.c.o
+keyword_4/malloc_use.o: keyword_4/malloc_use.c.o
 
-.PHONY : keyword_4/string.o
+.PHONY : keyword_4/malloc_use.o
 
 # target to build an object file
-keyword_4/string.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/keyword_4/string.c.o
-.PHONY : keyword_4/string.c.o
+keyword_4/malloc_use.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/keyword_4/malloc_use.c.o
+.PHONY : keyword_4/malloc_use.c.o
 
-keyword_4/string.i: keyword_4/string.c.i
+keyword_4/malloc_use.i: keyword_4/malloc_use.c.i
 
-.PHONY : keyword_4/string.i
+.PHONY : keyword_4/malloc_use.i
 
 # target to preprocess a source file
-keyword_4/string.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/keyword_4/string.c.i
-.PHONY : keyword_4/string.c.i
+keyword_4/malloc_use.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/keyword_4/malloc_use.c.i
+.PHONY : keyword_4/malloc_use.c.i
 
-keyword_4/string.s: keyword_4/string.c.s
+keyword_4/malloc_use.s: keyword_4/malloc_use.c.s
 
-.PHONY : keyword_4/string.s
+.PHONY : keyword_4/malloc_use.s
 
 # target to generate assembly for a file
-keyword_4/string.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/keyword_4/string.c.s
-.PHONY : keyword_4/string.c.s
+keyword_4/malloc_use.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/keyword_4/malloc_use.c.s
+.PHONY : keyword_4/malloc_use.c.s
 
 keyword_5/struct.o: keyword_5/struct.c.o
 
@@ -700,9 +700,9 @@ help:
 	@echo "... keyword_3/pointer1.o"
 	@echo "... keyword_3/pointer1.i"
 	@echo "... keyword_3/pointer1.s"
-	@echo "... keyword_4/string.o"
-	@echo "... keyword_4/string.i"
-	@echo "... keyword_4/string.s"
+	@echo "... keyword_4/malloc_use.o"
+	@echo "... keyword_4/malloc_use.i"
+	@echo "... keyword_4/malloc_use.s"
 	@echo "... keyword_5/struct.o"
 	@echo "... keyword_5/struct.i"
 	@echo "... keyword_5/struct.s"

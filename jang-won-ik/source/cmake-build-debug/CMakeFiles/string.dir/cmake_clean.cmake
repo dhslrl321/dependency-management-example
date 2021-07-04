@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/string.dir/keyword_4/string.c.o"
+  "CMakeFiles/string.dir/keyword_4/malloc_use.c.o"
   "string"
   "string.pdb"
 )

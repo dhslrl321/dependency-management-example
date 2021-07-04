@@ -1,0 +1,98 @@
+[##_Image|kage@woxWE/btq7SMNlXab/bzNouN2jeIS0xf46Eeb0R0/img.png|alignCenter|data-origin-width="960" data-origin-height="496" width="641" height="331" data-ke-mobilestyle="widthOrigin"|||_##]
+
+# 구조체
+
+현대의 프로그래밍에서는 **기본 자료형(int, long, char, double)** 만으로 프로그램을 동작시키기에는 많은 어려움이 있다.
+
+그래서 발전하게 된 것이 바로 **객체지향의 객체**이다.
+
+하지만 기본 자료형에서 바로 객체로 발전한 것은 아니고 객체와 기본 자료형 사이에 존재하는 개념이 바로 **구조체 이다**
+
+구조체의 기본 컨셉은 Primitive Data type 을 모아 Abstract data type 을 만드는 것이다.
+
+이렇게 구조체를 사용한다면 **데이터를 체계적으로 관리**할 수 있게 된다.
+
+# 구조체 사용하기
+
+구조체를 사용한다는 말은 **일단 정의하고, 값을 할당**한다는 소리다.
+
+## 구조체 정의하기
+
+구조체를 정의하는 방식에는 크게 3가지가 존재한다.
+
+- `struct` 로 정의하기
+  - 변수 생성할 때 struct 키워드를 명시해야함
+- `typedef struct 구조체 이름`
+  - 구조체 생성할 때 alias 를 이용하므로 변수 생성할 때 struct 를 명시하지 않아도 된다.
+- `typedef struct`
+  - 익명 구조체로 구조체 이름을 생략하고 바로 alias 로 지정할 수 있다
+
+```c
+// 정의 방식 1
+struct Student {
+    int id;
+    char *name;
+    double score;
+};
+
+// 정의 방식 2
+typedef struct Professor_s {
+    int id;
+    char *name;
+    char major[20];
+} Professor;
+
+// 정의 방식 3
+typedef struct {
+    int id;
+    char *name;
+    char major[20];
+} Researcher;
+```
+
+구조체를 사용하기 위해서는 위의 3가지 방식 중 한 가지만 사용해도 좋은데 보통 코드의 가독성과 편리성을 위해 3번 째 방식을 사용한다.
+
+## 구조체에 값 할당하기
+
+구조체에 값을 할당하는 방식에는 크게 2가지가 존재한다.
+
+1. 생성과 동시에 할당하기
+2. 항목 연산자 `.`과 대입 연산자 `=` 를 이용해서 할당
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+struct Student {
+    int id;
+    char *name;
+    double score;
+};
+
+typedef struct {
+    int id;
+    char *name;
+    char major[20];
+} Professor;
+
+int main() {
+
+    /*
+    * 1. struct 명시
+    * 2. 변수 생성과 동시에 초기화
+    */
+    struct Student student = {21, "장O익", 4.5};
+
+    /*
+    * 1. struct 키워드 무시
+    * 2. 항목 연산자 . 를 이용하여 할당
+    */
+    Professor professor;
+
+    professor.id = 21;
+    professor.name = "장O익";
+    strcpy(professor.major, "정보보안");
+
+    return 0;
+}
+```

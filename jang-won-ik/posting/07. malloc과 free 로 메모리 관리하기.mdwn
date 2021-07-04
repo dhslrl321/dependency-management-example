@@ -1,0 +1,103 @@
+[##_Image|kage@woxWE/btq7SMNlXab/bzNouN2jeIS0xf46Eeb0R0/img.png|alignCenter|data-origin-width="960" data-origin-height="496" width="641" height="331" data-ke-mobilestyle="widthOrigin"|||_##]
+
+# 메모리 구조
+
+C 언어가 많은 사랑을 받는 이유는 바로 **메모리**가 아닐까 생각한다고 첫 시간에 이야기를 했었다.
+
+오늘은 C 언어의 핵심 중 하나인 **메모리 관리**의 기본에 대해서 알아보도록 하겠다.
+
+그 전에 먼저 메모리의 구조에 대해서 알아야하는데, 메모리 구조는 총 4개로 나뉘어 진다.
+
+1. 스택 영역
+2. 힙 영역
+3. 데이터 영역
+4. 코드 영역
+
+[##_Image|kage@vVYO9/btq8HUzcwv3/3NOAe6v6ENMO2E7Z3MNSkK/img.png|alignCenter|data-origin-width="508" data-origin-height="555" width="477" height="521" data-ke-mobilestyle="widthOrigin"|||_##]
+
+여기서 **스택과 힙**에 주목을 해볼 필요가 있다.
+
+### 스택 영역
+
+컴파일 시점에 메모리가 결정되어 실행 속도가 빠르고 낭비가 없다는 특징이 있다.
+
+하지만 스택 영역은 상대적으로 한계가 있기 때문에 스택 이상을 쓰게된다면 에러가 발생할 가능성이 존재한다.
+
+### 힙 영역
+
+사용자가 직접 생성하는 혹은 할당하는 메모리 공간이다.
+
+Java 에서는 GC가 동작하여 활약하는 공간이라고 생각할 수 있다.
+
+힙은 최적화를 할 때도 사용되며 스택보다 큰 데이터를 할당할 때도 사용되긴 하지만 사용자가 직접 만질 수 있는 공간이기 때문에 아무래도 힙 손상이 발생하기 쉽다.
+
+# C 언어에서 메모리 사용하기
+
+c 언어에서 메모리를 조작할 때는 malloc과 free 를 이용하는게 일반적이다.
+
+1. malloc 으로 메모리 할당하기
+2. 사용하기
+3. free 로 할당받은 메모리 해제하기
+
+의 과정을 거치게 되는데, 좀 더 자세히 알아보자
+
+# malloc과 free
+
+malloc과 free 와 같은 메모리 관련 함수는 **stdlib.h** 헤더에 존재하므로 malloc, free, memcpy, memset 을 사용하려면 해당 헤더를 include 해야 한다.
+
+### malloc
+
+메모리를 할당받는 함수로 Memory + Allocation의 합성 약자로 **메모리 공간을 확보하고 메모리 블록을 할당**한다.
+
+malloc 함수를 사용할 때 **매개변수로 size** 를 지정하여 사용자가 얼만큼의 메모리를 할당받을 것인지 명시해야 한다.
+
+### free
+
+앞에서 본 malloc 으로 메모리를 할당했다면 Heap 손상을 발생시키지 않기 위해서 메모리를 **해제**시켜야 한다.
+
+만약 메모리 할당을 해제하지 않으면 후속 할당에서 **에러를 발생시킬 수 있**으므로 적절하게 메모리를 해제시켜야 한다.
+
+```c
+#include <stdlib.h>
+#include <stdio.h>
+
+int main() {
+
+    int number = 100;
+
+    int *pointer1 = &number;
+    int *pointer2 = malloc(sizeof(number));
+
+    printf("address: %010x \n", pointer1);
+    printf("address: %010x \n", pointer2);
+
+    free(pointer2);
+    return 0;
+}
+```
+
+# 메모리에 값을 저장하기
+
+앞선 코드에서는 메모리를 **할당 하고 해제** 하는 과정이었다.
+
+이번에는 할당받은 메모리에 **역참조를 이용하여 특정 값을 저장**해보자.
+
+```c
+#include <assert.h>
+#include <stdlib.h>
+
+int main() {
+
+    int number = 100;
+
+    int *pointer1 = &number;
+    int *pointer2 = malloc(sizeof(number));
+
+    *pointer2 = number;
+
+    assert(*pointer1 == *pointer2);
+
+    free(pointer2);
+    return 0;
+}
+```
