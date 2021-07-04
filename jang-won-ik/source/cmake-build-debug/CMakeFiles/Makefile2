@@ -72,11 +72,13 @@ CMAKE_BINARY_DIR = /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-w
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/string.dir/all
 all: CMakeFiles/switch.dir/all
 all: CMakeFiles/array_pointer_2.dir/all
 all: CMakeFiles/array_2d_pointer.dir/all
 all: CMakeFiles/main.dir/all
 all: CMakeFiles/array_pointer.dir/all
+all: CMakeFiles/struct.dir/all
 all: CMakeFiles/array2.dir/all
 all: CMakeFiles/array1.dir/all
 all: CMakeFiles/pointer1.dir/all
@@ -92,11 +94,13 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/string.dir/clean
 clean: CMakeFiles/switch.dir/clean
 clean: CMakeFiles/array_pointer_2.dir/clean
 clean: CMakeFiles/array_2d_pointer.dir/clean
 clean: CMakeFiles/main.dir/clean
 clean: CMakeFiles/array_pointer.dir/clean
+clean: CMakeFiles/struct.dir/clean
 clean: CMakeFiles/array2.dir/clean
 clean: CMakeFiles/array1.dir/clean
 clean: CMakeFiles/pointer1.dir/clean
@@ -107,13 +111,40 @@ clean: CMakeFiles/variables.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/string.dir
+
+# All Build rule for target.
+CMakeFiles/string.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target string"
+.PHONY : CMakeFiles/string.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/string.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/string.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/string.dir/rule
+
+# Convenience name for target.
+string: CMakeFiles/string.dir/rule
+
+.PHONY : string
+
+# clean rule for target.
+CMakeFiles/string.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/clean
+.PHONY : CMakeFiles/string.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/switch.dir
 
 # All Build rule for target.
 CMakeFiles/switch.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/switch.dir/build.make CMakeFiles/switch.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/switch.dir/build.make CMakeFiles/switch.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target switch"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=23,24 "Built target switch"
 .PHONY : CMakeFiles/switch.dir/all
 
 # Build rule for subdir invocation for target.
@@ -240,6 +271,33 @@ array_pointer: CMakeFiles/array_pointer.dir/rule
 CMakeFiles/array_pointer.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer.dir/build.make CMakeFiles/array_pointer.dir/clean
 .PHONY : CMakeFiles/array_pointer.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/struct.dir
+
+# All Build rule for target.
+CMakeFiles/struct.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct.dir/build.make CMakeFiles/struct.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct.dir/build.make CMakeFiles/struct.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=21,22 "Built target struct"
+.PHONY : CMakeFiles/struct.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/struct.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/struct.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/struct.dir/rule
+
+# Convenience name for target.
+struct: CMakeFiles/struct.dir/rule
+
+.PHONY : struct
+
+# clean rule for target.
+CMakeFiles/struct.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct.dir/build.make CMakeFiles/struct.dir/clean
+.PHONY : CMakeFiles/struct.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/array2.dir
@@ -383,7 +441,7 @@ CMakeFiles/array_2d_pointer_2.dir/clean:
 CMakeFiles/variables.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/variables.dir/build.make CMakeFiles/variables.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/variables.dir/build.make CMakeFiles/variables.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=21,22 "Built target variables"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=25,26 "Built target variables"
 .PHONY : CMakeFiles/variables.dir/all
 
 # Build rule for subdir invocation for target.

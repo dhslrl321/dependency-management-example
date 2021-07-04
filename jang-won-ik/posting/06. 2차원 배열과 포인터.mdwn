@@ -30,6 +30,8 @@ int arr[3][2] = {
 
 이렇게 먼저 머리에 메모리 구조를 이해하고 있어야 **포인터와 2차원 배열의 상관관계**에 대해서 알 수 있다.
 
+> 2차원 배열은 **연속적인 메모리에 할당**된다고 해서 1차원 배열처럼 일열로 보여줬지만 아래에 나올 그림은 가독성을 위해서 2차원 구조로 메모리에 존재한다고 가정해보자.
+
 # 2차원 배열의 포인터
 
 포인터 변수에 2차원 배열을 할당하기 위해서는 `int (*pointer)[행의 수];` 형태로 정의해야 한다.
@@ -69,6 +71,8 @@ int main() {
 
 그럼 2차원 배열에서도 역시 1차원 배열의 개념을 함께 이용할 수 있다.
 
+## 2차원 배열 포인터로 배열 주소 접근하기
+
 결국 포인터를 이용해서 이들 각각의 주소로 접근한다면 다음과 같은 방식으로 접근할 수 있다
 
 - `arr[0]` : `*pointer`
@@ -80,11 +84,19 @@ int main() {
 
 [##_Image|kage@c7ZKx9/btq8IgnuHlA/iq8eKA8cZaIlBXk6CBis60/img.png|alignCenter|data-origin-width="607" data-origin-height="504" width="532" height="442" data-ke-mobilestyle="widthOrigin"|||_##]
 
-## 2차원 배열 포인터로 배열 주소 접근하기
+그럼 이 특성을 이용해서 **배열의 모든 원소의 주소에 접근**할 수 있다.
 
-아까 앞에서 2차원 배열은 **연속적인 메모리에 할당**된다고 해서 1차원 배열처럼 일열로 보여줬지만 가독성을 위해서 2차원 구조로 메모리에 존재한다고 가정해보자.
+[##_Image|kage@cAs3Cl/btq8IDpfBKT/2t2InMIU2c4JXMNIkVDXRK/img.png|alignCenter|data-origin-width="325" data-origin-height="514" width="317" height="501" data-ke-mobilestyle="widthOrigin"|||_##]
 
-그럼 **지난 시간에 배웠던 배열과 포인터**의 관계로 배열의 모든 요소에 접근할 수 있다.
+이렇게 포인터와 정수를 이용해서 byte 를 옮겨 모든 원소에 접근할 수 있게 되는데, 이게 조금 헷갈릴 수 있다.
+
+`arr[1][1] == *(pointer + 1) + 1` 을 좀 더 분석해보자
+
+[##_Image|kage@btwnip/btq8ICYaQLn/pck0XI78ZJGv6SjhgzWzH1/img.png|alignCenter|data-origin-width="414" data-origin-height="135" data-ke-mobilestyle="widthOrigin"|||_##]
+
+이는 pointer 가 가리키는 주소 (arr)에 4 byte 를 더하고 +1 로 인해 또 4byte 를 더한 주소값이 되는 것이다.
+
+이를 **반증문을 통해서** 증명해보자면,
 
 ```c
 #include <assert.h>
@@ -107,6 +119,35 @@ int main() {
 
     assert(&arr[2][0] == *(pointer + 2));
     assert(&arr[2][1] == *(pointer + 2) + 1);
+
+    return 0;
+}
+```
+
+## 2차원 배열 포인터로 배열 원소의 값 가져오기
+
+이제 모든 원소의 주소에 접근할 수 있게 되었다! 그럼 **참조 연산**을 이용해서 실제 값을 취할 수 있게 된다.
+
+```c
+#include <stdio.h>
+
+int main() {
+    int arr[3][2] = {
+            {11, 22},
+            {33, 44},
+            {55, 66},
+    };
+
+    int (*pointer)[2] = arr;
+
+    printf("%d\n", **pointer);
+    printf("%d\n", *(*pointer + 1));
+
+    printf("%d\n", *(*(pointer + 1) + 0)); // + 0 은 생략 가능
+    printf("%d\n", *(*(pointer + 1) + 1));
+
+    printf("%d\n", *(*(pointer + 2) + 0)); // + 0 은 생략 가능
+    printf("%d\n", *(*(pointer + 2) + 1));
 
     return 0;
 }

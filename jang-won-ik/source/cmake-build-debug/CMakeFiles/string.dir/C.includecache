@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_4/string.c
+assert.h
+-
+stdio.h
+-
+

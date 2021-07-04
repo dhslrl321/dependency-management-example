@@ -2,20 +2,21 @@
 #include <assert.h>
 int main() {
     int arr[3][2] = {
-            {6, 3},
-            {9, 1},
-            {4, 7}
+            {11, 22},
+            {33, 44},
+            {55, 66},
     };
 
-    int (*pointer)[3] = arr;
+    int (*pointer)[2] = arr;
 
-    assert(&arr == pointer);
-    assert(sizeof(arr) == 24);
+    printf("%d\n", **pointer);
+    printf("%d\n", *(*pointer + 1));
 
-    assert(*pointer == &arr[0]);
-    assert(sizeof(*pointer) == 12);
+    printf("%d\n", *(*(pointer + 1) + 0));
+    printf("%d\n", *(*(pointer + 1) + 1));
 
-    assert(*(*pointer) == arr[0][0]); // 첫 번째 배열 포인터의 요소
+    printf("%d\n", *(*(pointer + 2) + 0));
+    printf("%d\n", *(*(pointer + 2) + 1));
 
     return 0;
 }

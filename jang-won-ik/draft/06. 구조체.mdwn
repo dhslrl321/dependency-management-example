@@ -1,0 +1,51 @@
+# 구조체
+
+- Primitive Data type 들을 모아 abstract data type 을 정의
+  - java 의 class 와 비슷한 느낌
+  - struct -> class 로 진화함
+- 2가지 정의 방식
+  1. `struct` 로 정의하기 : 변수 생성할 때 struct 키워드를 명시해야함
+  2. `typedef struct` : 구조체 생성할 때 alias 를 이용하므로 변수 생성할 때 struct 를 명시하지 않아도됨
+- 2가지 할당 방식
+  1. 생성과 동시에 할당 `Student = { "", "", ""}` 와 같은 형태로 인자의 순서에 따라 구조체 변수에 적용됨
+  2. 항목 연산자 `.`와 대입 연산자 `=` 를 이용해서 할당
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+struct Student {
+    int id;
+    char *name;
+    double score;
+};
+
+typedef struct Professor_s {
+    int id;
+    char *name;
+    char major[20];
+} Professor;
+
+int main() {
+
+    struct Student student = {21, "장O익", 4.5}; // struct 키워드 명시
+    Professor professor; // struct 키워드 무시 & 구조체 변수 생성과 동시에 할당
+
+    professor.id = 21; // 항목 연산자 . 를 이용하여 할당
+    professor.name = "장O익";
+    strcpy(professor.major, "정보보안");
+
+    return 0;
+}
+```
+
+# 주의 사항
+
+- 구조체에 char 배열, 즉 문자열이 존재할 때, 항목 연산자와 대입 연산자로 바로 넣으면 안됨
+  - strcpy() 사용
+
+# 구조체 안에 구조체
+
+- 구조체 배열 사용 가능
+
+# 구조체 배열

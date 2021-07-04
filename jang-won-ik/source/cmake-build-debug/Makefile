@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named string
+
+# Build rule for target.
+string: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 string
+.PHONY : string
+
+# fast build rule for target.
+string/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/build
+.PHONY : string/fast
+
+#=============================================================================
 # Target rules for targets named switch
 
 # Build rule for target.
@@ -193,6 +206,19 @@ array_pointer: cmake_check_build_system
 array_pointer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer.dir/build.make CMakeFiles/array_pointer.dir/build
 .PHONY : array_pointer/fast
+
+#=============================================================================
+# Target rules for targets named struct
+
+# Build rule for target.
+struct: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 struct
+.PHONY : struct
+
+# fast build rule for target.
+struct/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct.dir/build.make CMakeFiles/struct.dir/build
+.PHONY : struct/fast
 
 #=============================================================================
 # Target rules for targets named array2
@@ -542,6 +568,60 @@ keyword_3/pointer1.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pointer1.dir/build.make CMakeFiles/pointer1.dir/keyword_3/pointer1.c.s
 .PHONY : keyword_3/pointer1.c.s
 
+keyword_4/string.o: keyword_4/string.c.o
+
+.PHONY : keyword_4/string.o
+
+# target to build an object file
+keyword_4/string.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/keyword_4/string.c.o
+.PHONY : keyword_4/string.c.o
+
+keyword_4/string.i: keyword_4/string.c.i
+
+.PHONY : keyword_4/string.i
+
+# target to preprocess a source file
+keyword_4/string.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/keyword_4/string.c.i
+.PHONY : keyword_4/string.c.i
+
+keyword_4/string.s: keyword_4/string.c.s
+
+.PHONY : keyword_4/string.s
+
+# target to generate assembly for a file
+keyword_4/string.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/keyword_4/string.c.s
+.PHONY : keyword_4/string.c.s
+
+keyword_5/struct.o: keyword_5/struct.c.o
+
+.PHONY : keyword_5/struct.o
+
+# target to build an object file
+keyword_5/struct.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct.dir/build.make CMakeFiles/struct.dir/keyword_5/struct.c.o
+.PHONY : keyword_5/struct.c.o
+
+keyword_5/struct.i: keyword_5/struct.c.i
+
+.PHONY : keyword_5/struct.i
+
+# target to preprocess a source file
+keyword_5/struct.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct.dir/build.make CMakeFiles/struct.dir/keyword_5/struct.c.i
+.PHONY : keyword_5/struct.c.i
+
+keyword_5/struct.s: keyword_5/struct.c.s
+
+.PHONY : keyword_5/struct.s
+
+# target to generate assembly for a file
+keyword_5/struct.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct.dir/build.make CMakeFiles/struct.dir/keyword_5/struct.c.s
+.PHONY : keyword_5/struct.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -586,6 +666,8 @@ help:
 	@echo "... condition"
 	@echo "... main"
 	@echo "... pointer1"
+	@echo "... string"
+	@echo "... struct"
 	@echo "... switch"
 	@echo "... variables"
 	@echo "... keyword_1/condition.o"
@@ -618,6 +700,12 @@ help:
 	@echo "... keyword_3/pointer1.o"
 	@echo "... keyword_3/pointer1.i"
 	@echo "... keyword_3/pointer1.s"
+	@echo "... keyword_4/string.o"
+	@echo "... keyword_4/string.i"
+	@echo "... keyword_4/string.s"
+	@echo "... keyword_5/struct.o"
+	@echo "... keyword_5/struct.i"
+	@echo "... keyword_5/struct.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
