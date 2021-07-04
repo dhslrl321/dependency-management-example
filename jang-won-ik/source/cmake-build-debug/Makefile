@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named struct_2
+
+# Build rule for target.
+struct_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 struct_2
+.PHONY : struct_2
+
+# fast build rule for target.
+struct_2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct_2.dir/build.make CMakeFiles/struct_2.dir/build
+.PHONY : struct_2/fast
+
+#=============================================================================
 # Target rules for targets named string
 
 # Build rule for target.
@@ -622,6 +635,33 @@ keyword_5/struct.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct.dir/build.make CMakeFiles/struct.dir/keyword_5/struct.c.s
 .PHONY : keyword_5/struct.c.s
 
+keyword_5/struct_2.o: keyword_5/struct_2.c.o
+
+.PHONY : keyword_5/struct_2.o
+
+# target to build an object file
+keyword_5/struct_2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct_2.dir/build.make CMakeFiles/struct_2.dir/keyword_5/struct_2.c.o
+.PHONY : keyword_5/struct_2.c.o
+
+keyword_5/struct_2.i: keyword_5/struct_2.c.i
+
+.PHONY : keyword_5/struct_2.i
+
+# target to preprocess a source file
+keyword_5/struct_2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct_2.dir/build.make CMakeFiles/struct_2.dir/keyword_5/struct_2.c.i
+.PHONY : keyword_5/struct_2.c.i
+
+keyword_5/struct_2.s: keyword_5/struct_2.c.s
+
+.PHONY : keyword_5/struct_2.s
+
+# target to generate assembly for a file
+keyword_5/struct_2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct_2.dir/build.make CMakeFiles/struct_2.dir/keyword_5/struct_2.c.s
+.PHONY : keyword_5/struct_2.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -668,6 +708,7 @@ help:
 	@echo "... pointer1"
 	@echo "... string"
 	@echo "... struct"
+	@echo "... struct_2"
 	@echo "... switch"
 	@echo "... variables"
 	@echo "... keyword_1/condition.o"
@@ -706,6 +747,9 @@ help:
 	@echo "... keyword_5/struct.o"
 	@echo "... keyword_5/struct.i"
 	@echo "... keyword_5/struct.s"
+	@echo "... keyword_5/struct_2.o"
+	@echo "... keyword_5/struct_2.i"
+	@echo "... keyword_5/struct_2.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

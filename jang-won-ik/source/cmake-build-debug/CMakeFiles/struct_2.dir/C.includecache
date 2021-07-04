@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_5/struct_2.c
+stdio.h
+-
+assert.h
+-
+stdlib.h
+-
+string.h
+-
+

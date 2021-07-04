@@ -17,6 +17,31 @@
   - 화살표 연산을 사용하지 않을 경우 (괄호와 역참조 이용)
     - `(*pointer).age = 14;`
 
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct {
+    int age;
+    char name[];
+} Student;
+
+int main() {
+    Student *pointer = malloc(sizeof(Student));
+
+    pointer -> age = 25;
+    strcpy(pointer -> name, "장원익");
+
+    printf("이름: %s \n", pointer -> name);
+    printf("나이: %d", pointer -> age);
+
+    free(pointer);
+
+    return 0;
+}
+```
+
 # 구조체의 멤버가 포인터인 경우 역참조 하기
 
 - 구조체의 멤버가 **포인터 변수**일 때, 역참조
