@@ -20,8 +20,12 @@
 
 ### 기본 교재
 
-- [윤성우의 열혈 C 프로그래밍](http://book.interpark.com/product/BookDisplay.do?_method=detail&sc.prdNo=206832627&gclid=CjwKCAjwzruGBhBAEiwAUqMR8KL5jmoaV4rdoBQL6avUdtpsbhHlpCxJq5tK4zsJgyXt970hmBg9FRoCWikQAvD_BwE)
-- [모두의 코드-씹어먹는 C 언어 블로그 및 강좌](https://modoocode.com/231)
+- C
+  - [윤성우의 열혈 C 프로그래밍](http://book.interpark.com/product/BookDisplay.do?_method=detail&sc.prdNo=206832627&gclid=CjwKCAjwzruGBhBAEiwAUqMR8KL5jmoaV4rdoBQL6avUdtpsbhHlpCxJq5tK4zsJgyXt970hmBg9FRoCWikQAvD_BwE)
+  - [모두의 코드-씹어먹는 C 언어 블로그 및 강좌](https://modoocode.com/231)
+- C++
+  - [명품 C++ Programming](https://www.booksr.co.kr/html/book/book.asp?seq=697053)
+  - [모두의 코드-씹어먹는 C++ 블로그 및 강좌](https://modoocode.com/135)
 
 ### 학습 보조 자료 및 PDF 자료
 
