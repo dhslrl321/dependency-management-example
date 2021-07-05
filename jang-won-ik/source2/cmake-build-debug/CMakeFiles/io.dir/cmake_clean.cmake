@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/io.dir/keyword_1/io.cpp.o"
+  "CMakeFiles/io.dir/keyword_1/namespace.cpp.o"
   "io"
   "io.pdb"
 )

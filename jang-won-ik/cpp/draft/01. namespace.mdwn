@@ -1,0 +1,82 @@
+# namespace
+
+- 소스가 길어지고 오픈 소스를 가져와서 사용하는 경우 동일한 변수명이 존재한다면 컴파일러가 이름 충돌 문제를 일으킴
+  - 이름 공간, namespace 를 이용해서 해결해야함
+- namespace, 이름 공간
+  - identifier 이 충돌하지 않게 하기 위한 방법
+
+```cpp
+namespace commerce {
+  // 커머스 팀의 namespace
+    int id;
+}
+
+namespace order {
+  // 주문 팀의 namespace
+    int id;
+}
+
+int main() {
+    commerce::id = 1004;
+    order::id = 227;
+
+    return 0;
+}
+```
+
+# 유명한 namespace
+
+- std 도 namespace 임
+  - cpp 가 정한 **표준 namespace**
+
+```cpp
+#include <iostream>
+
+namespace commerce {
+    int id;
+}
+
+namespace order {
+    int id;
+}
+
+int main() {
+
+    commerce::id = 1004;
+    order::id = 227;
+
+    std::cout << "commerce 의 id : " << commerce::id << std::endl;
+    std::cout << "order 의 id : " << order::id << std::endl;
+
+    return 0;
+}
+```
+
+# 특정 namespace 를 파일 내에서 global 하게 적용
+
+- `using` 지시어를 사용하면 됨
+  - `using namespace std;`
+
+```cpp
+#include <iostream>
+using namespace std; // std 의 namepace 를 이용
+
+namespace commerce { // custom namespace 1
+    int id;
+}
+
+namespace order { // custom namespace 2
+    int id;
+}
+
+int main() {
+
+    commerce::id = 1004;
+    order::id = 227;
+
+    cout << "commerce 의 id : " << commerce::id << endl; // default namespace 로 std 를 적용했으므로 std 생략 가능
+    cout << "order 의 id : " << order::id << endl; // default namespace 로 std 를 적용했으므로 std 생략 가능
+
+    return 0;
+}
+```

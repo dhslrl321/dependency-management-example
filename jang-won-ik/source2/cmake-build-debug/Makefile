@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named cin_getline
+
+# Build rule for target.
+cin_getline: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cin_getline
+.PHONY : cin_getline
+
+# fast build rule for target.
+cin_getline/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cin_getline.dir/build.make CMakeFiles/cin_getline.dir/build
+.PHONY : cin_getline/fast
+
+#=============================================================================
 # Target rules for targets named io
 
 # Build rule for target.
@@ -141,6 +154,19 @@ io: cmake_check_build_system
 io/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/io.dir/build.make CMakeFiles/io.dir/build
 .PHONY : io/fast
+
+#=============================================================================
+# Target rules for targets named input
+
+# Build rule for target.
+input: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 input
+.PHONY : input
+
+# fast build rule for target.
+input/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/input.dir/build.make CMakeFiles/input.dir/build
+.PHONY : input/fast
 
 #=============================================================================
 # Target rules for targets named source2
@@ -155,32 +181,86 @@ source2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/source2.dir/build.make CMakeFiles/source2.dir/build
 .PHONY : source2/fast
 
-keyword_1/io.o: keyword_1/io.cpp.o
+keyword_1/cin_getline.o: keyword_1/cin_getline.cpp.o
 
-.PHONY : keyword_1/io.o
+.PHONY : keyword_1/cin_getline.o
 
 # target to build an object file
-keyword_1/io.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/io.dir/build.make CMakeFiles/io.dir/keyword_1/io.cpp.o
-.PHONY : keyword_1/io.cpp.o
+keyword_1/cin_getline.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cin_getline.dir/build.make CMakeFiles/cin_getline.dir/keyword_1/cin_getline.cpp.o
+.PHONY : keyword_1/cin_getline.cpp.o
 
-keyword_1/io.i: keyword_1/io.cpp.i
+keyword_1/cin_getline.i: keyword_1/cin_getline.cpp.i
 
-.PHONY : keyword_1/io.i
+.PHONY : keyword_1/cin_getline.i
 
 # target to preprocess a source file
-keyword_1/io.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/io.dir/build.make CMakeFiles/io.dir/keyword_1/io.cpp.i
-.PHONY : keyword_1/io.cpp.i
+keyword_1/cin_getline.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cin_getline.dir/build.make CMakeFiles/cin_getline.dir/keyword_1/cin_getline.cpp.i
+.PHONY : keyword_1/cin_getline.cpp.i
 
-keyword_1/io.s: keyword_1/io.cpp.s
+keyword_1/cin_getline.s: keyword_1/cin_getline.cpp.s
 
-.PHONY : keyword_1/io.s
+.PHONY : keyword_1/cin_getline.s
 
 # target to generate assembly for a file
-keyword_1/io.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/io.dir/build.make CMakeFiles/io.dir/keyword_1/io.cpp.s
-.PHONY : keyword_1/io.cpp.s
+keyword_1/cin_getline.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cin_getline.dir/build.make CMakeFiles/cin_getline.dir/keyword_1/cin_getline.cpp.s
+.PHONY : keyword_1/cin_getline.cpp.s
+
+keyword_1/input.o: keyword_1/input.cpp.o
+
+.PHONY : keyword_1/input.o
+
+# target to build an object file
+keyword_1/input.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/input.dir/build.make CMakeFiles/input.dir/keyword_1/input.cpp.o
+.PHONY : keyword_1/input.cpp.o
+
+keyword_1/input.i: keyword_1/input.cpp.i
+
+.PHONY : keyword_1/input.i
+
+# target to preprocess a source file
+keyword_1/input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/input.dir/build.make CMakeFiles/input.dir/keyword_1/input.cpp.i
+.PHONY : keyword_1/input.cpp.i
+
+keyword_1/input.s: keyword_1/input.cpp.s
+
+.PHONY : keyword_1/input.s
+
+# target to generate assembly for a file
+keyword_1/input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/input.dir/build.make CMakeFiles/input.dir/keyword_1/input.cpp.s
+.PHONY : keyword_1/input.cpp.s
+
+keyword_1/namespace.o: keyword_1/namespace.cpp.o
+
+.PHONY : keyword_1/namespace.o
+
+# target to build an object file
+keyword_1/namespace.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/io.dir/build.make CMakeFiles/io.dir/keyword_1/namespace.cpp.o
+.PHONY : keyword_1/namespace.cpp.o
+
+keyword_1/namespace.i: keyword_1/namespace.cpp.i
+
+.PHONY : keyword_1/namespace.i
+
+# target to preprocess a source file
+keyword_1/namespace.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/io.dir/build.make CMakeFiles/io.dir/keyword_1/namespace.cpp.i
+.PHONY : keyword_1/namespace.cpp.i
+
+keyword_1/namespace.s: keyword_1/namespace.cpp.s
+
+.PHONY : keyword_1/namespace.s
+
+# target to generate assembly for a file
+keyword_1/namespace.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/io.dir/build.make CMakeFiles/io.dir/keyword_1/namespace.cpp.s
+.PHONY : keyword_1/namespace.cpp.s
 
 main.o: main.cpp.o
 
@@ -217,11 +297,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... cin_getline"
+	@echo "... input"
 	@echo "... io"
 	@echo "... source2"
-	@echo "... keyword_1/io.o"
-	@echo "... keyword_1/io.i"
-	@echo "... keyword_1/io.s"
+	@echo "... keyword_1/cin_getline.o"
+	@echo "... keyword_1/cin_getline.i"
+	@echo "... keyword_1/cin_getline.s"
+	@echo "... keyword_1/input.o"
+	@echo "... keyword_1/input.i"
+	@echo "... keyword_1/input.s"
+	@echo "... keyword_1/namespace.o"
+	@echo "... keyword_1/namespace.i"
+	@echo "... keyword_1/namespace.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

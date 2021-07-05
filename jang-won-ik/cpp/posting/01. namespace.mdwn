@@ -1,0 +1,83 @@
+[##_Image|kage@bdg7QY/btq8L7x9gkS/PBhnlkTkVtWJkvK2cZlbO1/img.png|alignCenter|data-origin-width="357" data-origin-height="238" data-ke-mobilestyle="widthOrigin"|||_##]
+
+# namespace
+
+하나의 완성된 프로젝트를 끝내기 위해서는 적게는 1000줄 많게는 몇만줄의 코드가 나오게 된다.
+
+그 많은 코드들 사이에서 변수명, 클래스명이 겹치면 어떻게될까??
+
+그럼 아마 namespace collision 이 발생하여 컴파일러가 컴파일링을 멈출 것이다.
+
+그 문제를 해결하고자 하는 것이 바로 namespace 이다.
+
+#### namespace 는 identifier, 식별자의 이름 충돌을 방지하기 위한 방법이다.
+
+사용 방법은 매우 간편하다.
+
+파일 상단에 namespace 를 지정해주면 된다.
+
+그래서 해당 식별자를 사용한다면 `namespace::identifier` 로 사용하면 된다
+
+```cpp
+namespace commerce {
+  // 커머스 팀의 namespace
+    int id;
+}
+
+namespace order {
+  // 주문 팀의 namespace
+    int id;
+}
+
+int main() {
+    commerce::id = 1004;
+    order::id = 227;
+
+    return 0;
+}
+```
+
+# using 키워드
+
+콘솔에 출력하는 코드를 봐보자
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+이제 우리는 `std::cout` 의 의미를 알게 되었다.
+
+하지만 매번 std 키워드를 붙여야 할까?
+
+#### `using` 키워드를 이용한다면 해당 파일에서 global 하게 사용할 수 있게 된다.
+
+사용하는 방법은 코드 상단에 `using namespace std;` 를 명시해주면 된다.
+
+```cpp
+#include <iostream>
+using namespace std; // std 의 namepace 를 이용
+
+namespace commerce { // custom namespace 1
+    int id;
+}
+
+namespace order { // custom namespace 2
+    int id;
+}
+
+int main() {
+
+    commerce::id = 1004;
+    order::id = 227;
+
+    cout << "commerce 의 id : " << commerce::id << endl; // default namespace 로 std 를 적용했으므로 std 생략 가능
+    cout << "order 의 id : " << order::id << endl; // default namespace 로 std 를 적용했으므로 std 생략 가능
+
+    return 0;
+}
+```

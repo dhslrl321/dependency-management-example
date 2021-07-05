@@ -1,0 +1,130 @@
+[##_Image|kage@bdg7QY/btq8L7x9gkS/PBhnlkTkVtWJkvK2cZlbO1/img.png|alignCenter|data-origin-width="357" data-origin-height="238" data-ke-mobilestyle="widthOrigin"|||_##]
+
+# C++ 콘솔에서 사용자의 입력을 받는 방법
+
+콘솔에 입력을 받는 방법은 프로그래밍을 배울 떄 꽤나 중요하다.
+
+상용 프로그램 중에서는 콘솔에서 작업하는 환경이 드물기 때문에 중요하지 않다고 생각할 수 있는데, **코딩 테스트**나 C++ **이론 학습**에서 간단하게 테스트하고 입력 값을 줄 때 사용을 할 수 있으니 잘 알아보도록 하자.
+
+콘솔에 입력 받는 방법은 여러 방법이 존재하겠지만 오늘은 크게 2가지를 이용하려 한다.
+
+1. std의 cin
+2. cin의 getline
+
+# std의 cin
+
+iostream 헤더 파일에 존재하는 standard input stream 인 **cin** 을 이용해서 입력을 받을 수 있다.
+
+모든 Primitive Data type 에 대해서 입력이 가능하며 여러 개의 `>>` 연산자를 이용해서 여러 값을 입력받고 할당할 수 있다.
+
+기본적인 사용을 보자
+
+```c
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int height;
+    int width;
+
+    cin >> height >> width;
+
+    cout << "height: " << height << endl;
+    cout << "width: " << width << endl;
+
+    return 0;
+}
+```
+
+여기서 2개의 개념에 집중해보자.
+
+### cin 객체
+
+cin 은 Stream Buffer 이다.
+
+C++ 에서 표준 입력 스트림 객체, standard input stream object 로 사용자의 입력을 콘솔에서 받을 때 사용된다.
+
+#### cin 의 입력의 끝
+
+cin 은 기본적으로 **Enter** 키로 입력의 끝을 인식한다.
+
+키보드를 문자로 입력한다면 cin 의 스트림 버퍼에 저장하게 되는데, 스트림 버퍼를 이용하기 전 까지 backspace 를 마음대로 사용해도 크게 문제가 되지 않는 것이다.
+
+### `>>` 연산자
+
+이를 **스트림 추출 연산자**, stream extraction operator 라고 한다
+
+왼쪽 스트림 객체로부터 데이터를 읽어서 오른쪽에 위치한 피연산자에 지정된 변수에 삽입할 수 있다.
+
+# 문자열 입력
+
+문자열은 잘 알다싶이 char 의 배열 형태이다.
+
+하지만 cin 으로 쉽게 사용가능하다.
+
+```c
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    char name[5];
+
+    cin >> name;
+
+    cout << "name: " << name << endl;
+
+    return 0;
+}
+```
+
+# cin 의 문제점?
+
+cin 에서 입력의 끝은 Enter 로 인식한다고 했는데, 그럼 만약 **white space** 는 어떻게 인식할까?
+
+위에 존재하는 코드에 **홍 길 동** 이라는 문자열을 입력하면 어떻게 될까?
+
+[##_Image|kage@tv5I9/btq8Tw3UhCC/KXNoIvZgx0jkKeIiT2ch4K/img.png|alignCenter|data-origin-width="162" data-origin-height="105" data-ke-mobilestyle="widthOrigin"|||_##]
+
+보다싶이 **홍** 만 출력되고 나머지 길 동은 출력되지 않는다.
+
+이 이유는 바로 cin 의 특성에 존재한다.
+
+#### cin 은 빈칸 (white space) 를 만나기 전 까지 하나의 문자열로만 인식하기 때문이다.
+
+그럼 위의 **홍 길 동** 이라는 문자열을 스트림으로 읽어들이면 홍 까지만 인식되는 것이다.
+
+그래서 이 문제를 해결하려면 어떻게 해야할까?
+
+# 공백이 포함된 문자열 입력
+
+이 방법을 해결하기 위해서는 cin 의 멤버 함수인 `getline()` 함수를 이용할 수 있다.
+
+cin 이 white space 를 기준으로 하나의 문자열로 인식을 했다면 cin.getline() 은 **개행을 기준으로 인식**하게 된다.
+
+#### **cin.getline(buf, size, delimitChar)**;
+
+의 형태로 사용하게 되는데,
+
+- buf : 저장하려는 변수
+- size : buf target 배열의 크기
+- delimitChar : 문자열 입력 끝을 지정하는 구분 문자 (`\n` 은 생략 가능)
+
+으로 사용하면 된다.
+
+그럼 white space 문자도 하나의 문자열로 인식하여 동작하게 된다.
+
+```c
+#include <iostream>
+using namespace std;
+
+int main() {
+    char name[10];
+
+    cin.getline(name, 10); // cin.getline(name, 10, '\n'); 과 동일
+
+    cout << "name: " << name << endl;
+    return 0;
+}
+```

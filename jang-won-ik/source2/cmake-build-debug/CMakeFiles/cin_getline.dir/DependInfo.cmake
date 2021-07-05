@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/keyword_1/namespace.cpp" "/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/CMakeFiles/io.dir/keyword_1/namespace.cpp.o"
+  "/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/keyword_1/cin_getline.cpp" "/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/CMakeFiles/cin_getline.dir/keyword_1/cin_getline.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

@@ -50,6 +50,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/cin_getline.dir/DependInfo.cmake"
   "CMakeFiles/io.dir/DependInfo.cmake"
+  "CMakeFiles/input.dir/DependInfo.cmake"
   "CMakeFiles/source2.dir/DependInfo.cmake"
   )

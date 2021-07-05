@@ -1,0 +1,86 @@
+# cin 과 `>>` 연산자를 이용한 키 입력
+
+- 표준 입력 스트림 : cin
+  - iostream 헤더 파일에 존재
+- 모든 기본 자료형에 대한 입력이 가능함
+- 여러개의 `>>` 연산자를 이용해서 여러 값을 입력받을 수 있음
+
+```c
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int height;
+    int width;
+
+    cin >> height >> width;
+
+    cout << "height: " << height << endl;
+    cout << "width: " << width << endl;
+
+    return 0;
+}
+```
+
+- cin 객체
+  - 스트림 버퍼
+  - c++ 표준 입력 스트림 객체 (standard input stream object)
+- `>>` 연산자
+  - 스트림 추출 연산자 (stream extraction opertaor)
+  - 왼쪽 스트림 객체로부터 데이터를 읽어 오른쪽 피연산자에 지정된 변수에 삽입
+
+# 입력의 끝
+
+- Enter 키로 입력의 끝을 인식함
+  - 키보드로 문자를 입력하면 cin 의 스트림 버퍼에 저장
+    - 스트림 버퍼를 이용하기 때문에 엔터를 치기 전 까지 backspace 를 마음껏 사용할 수 있음
+  - Enter 만나면 `>>` 연산자에 의해 변수에 저장
+
+# 문자열 입력
+
+- cin 으로 일반 변수에 사용하는 것 처럼 사용
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    char name[5];
+
+    // cin >> name >> address;
+    cin >> name;
+
+    cout << "name: " << name << endl;
+
+    return 0;
+}
+```
+
+- 문제점
+  - 빈칸(white space) 만나기 전 까지 하나의 문자열로 인식
+  - 공백을 불포함
+
+# 공백이 포함된 문자열 입력
+
+- cin.getline() 메서드 이용
+  - cin 이 white space 를 기준으로 하나의 문자열로 인식했다면 cin.getline()은 개행을 기준으로 인식
+  - `cin.getline(buf, size, delimitChar)`;
+    - buf : 저장하려는 변수
+    - size : buf target 배열의 크기
+    - delimitChar : 문자열 입력 끝을 지정하는 구분 문자 (`\n` 은 생략 가능)
+
+```c
+#include <iostream>
+using namespace std;
+
+int main() {
+    char name[10];
+
+    cin.getline(name, 10); // cin.getline(name, 10, '\n'); 과 동일
+
+    cout << "name: " << name << endl;
+    return 0;
+}
+```
