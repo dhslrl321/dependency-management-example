@@ -76,27 +76,27 @@ include CMakeFiles/array_pointer.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/array_pointer.dir/flags.make
 
-CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.o: CMakeFiles/array_pointer.dir/flags.make
-CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.o: ../keyword_3/array_pointer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.o -c /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_3/array_pointer.c
+CMakeFiles/array_pointer.dir/c/keyword_3/array_pointer.c.o: CMakeFiles/array_pointer.dir/flags.make
+CMakeFiles/array_pointer.dir/c/keyword_3/array_pointer.c.o: ../c/keyword_3/array_pointer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/array_pointer.dir/c/keyword_3/array_pointer.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/array_pointer.dir/c/keyword_3/array_pointer.c.o -c /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_3/array_pointer.c
 
-CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_3/array_pointer.c > CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.i
+CMakeFiles/array_pointer.dir/c/keyword_3/array_pointer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/array_pointer.dir/c/keyword_3/array_pointer.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_3/array_pointer.c > CMakeFiles/array_pointer.dir/c/keyword_3/array_pointer.c.i
 
-CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_3/array_pointer.c -o CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.s
+CMakeFiles/array_pointer.dir/c/keyword_3/array_pointer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/array_pointer.dir/c/keyword_3/array_pointer.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_3/array_pointer.c -o CMakeFiles/array_pointer.dir/c/keyword_3/array_pointer.c.s
 
 # Object files for target array_pointer
 array_pointer_OBJECTS = \
-"CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.o"
+"CMakeFiles/array_pointer.dir/c/keyword_3/array_pointer.c.o"
 
 # External object files for target array_pointer
 array_pointer_EXTERNAL_OBJECTS =
 
-array_pointer: CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.o
+array_pointer: CMakeFiles/array_pointer.dir/c/keyword_3/array_pointer.c.o
 array_pointer: CMakeFiles/array_pointer.dir/build.make
 array_pointer: CMakeFiles/array_pointer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable array_pointer"

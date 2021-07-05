@@ -76,27 +76,27 @@ include CMakeFiles/variables.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/variables.dir/flags.make
 
-CMakeFiles/variables.dir/keyword_1/variables.c.o: CMakeFiles/variables.dir/flags.make
-CMakeFiles/variables.dir/keyword_1/variables.c.o: ../keyword_1/variables.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/variables.dir/keyword_1/variables.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/variables.dir/keyword_1/variables.c.o -c /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_1/variables.c
+CMakeFiles/variables.dir/c/keyword_1/variables.c.o: CMakeFiles/variables.dir/flags.make
+CMakeFiles/variables.dir/c/keyword_1/variables.c.o: ../c/keyword_1/variables.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/variables.dir/c/keyword_1/variables.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/variables.dir/c/keyword_1/variables.c.o -c /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_1/variables.c
 
-CMakeFiles/variables.dir/keyword_1/variables.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/variables.dir/keyword_1/variables.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_1/variables.c > CMakeFiles/variables.dir/keyword_1/variables.c.i
+CMakeFiles/variables.dir/c/keyword_1/variables.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/variables.dir/c/keyword_1/variables.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_1/variables.c > CMakeFiles/variables.dir/c/keyword_1/variables.c.i
 
-CMakeFiles/variables.dir/keyword_1/variables.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/variables.dir/keyword_1/variables.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_1/variables.c -o CMakeFiles/variables.dir/keyword_1/variables.c.s
+CMakeFiles/variables.dir/c/keyword_1/variables.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/variables.dir/c/keyword_1/variables.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_1/variables.c -o CMakeFiles/variables.dir/c/keyword_1/variables.c.s
 
 # Object files for target variables
 variables_OBJECTS = \
-"CMakeFiles/variables.dir/keyword_1/variables.c.o"
+"CMakeFiles/variables.dir/c/keyword_1/variables.c.o"
 
 # External object files for target variables
 variables_EXTERNAL_OBJECTS =
 
-variables: CMakeFiles/variables.dir/keyword_1/variables.c.o
+variables: CMakeFiles/variables.dir/c/keyword_1/variables.c.o
 variables: CMakeFiles/variables.dir/build.make
 variables: CMakeFiles/variables.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable variables"

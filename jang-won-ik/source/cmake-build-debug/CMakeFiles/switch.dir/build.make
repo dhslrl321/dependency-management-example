@@ -76,27 +76,27 @@ include CMakeFiles/switch.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/switch.dir/flags.make
 
-CMakeFiles/switch.dir/keyword_1/switch.c.o: CMakeFiles/switch.dir/flags.make
-CMakeFiles/switch.dir/keyword_1/switch.c.o: ../keyword_1/switch.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/switch.dir/keyword_1/switch.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/switch.dir/keyword_1/switch.c.o -c /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_1/switch.c
+CMakeFiles/switch.dir/c/keyword_1/switch.c.o: CMakeFiles/switch.dir/flags.make
+CMakeFiles/switch.dir/c/keyword_1/switch.c.o: ../c/keyword_1/switch.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/switch.dir/c/keyword_1/switch.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/switch.dir/c/keyword_1/switch.c.o -c /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_1/switch.c
 
-CMakeFiles/switch.dir/keyword_1/switch.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/switch.dir/keyword_1/switch.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_1/switch.c > CMakeFiles/switch.dir/keyword_1/switch.c.i
+CMakeFiles/switch.dir/c/keyword_1/switch.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/switch.dir/c/keyword_1/switch.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_1/switch.c > CMakeFiles/switch.dir/c/keyword_1/switch.c.i
 
-CMakeFiles/switch.dir/keyword_1/switch.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/switch.dir/keyword_1/switch.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_1/switch.c -o CMakeFiles/switch.dir/keyword_1/switch.c.s
+CMakeFiles/switch.dir/c/keyword_1/switch.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/switch.dir/c/keyword_1/switch.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_1/switch.c -o CMakeFiles/switch.dir/c/keyword_1/switch.c.s
 
 # Object files for target switch
 switch_OBJECTS = \
-"CMakeFiles/switch.dir/keyword_1/switch.c.o"
+"CMakeFiles/switch.dir/c/keyword_1/switch.c.o"
 
 # External object files for target switch
 switch_EXTERNAL_OBJECTS =
 
-switch: CMakeFiles/switch.dir/keyword_1/switch.c.o
+switch: CMakeFiles/switch.dir/c/keyword_1/switch.c.o
 switch: CMakeFiles/switch.dir/build.make
 switch: CMakeFiles/switch.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable switch"

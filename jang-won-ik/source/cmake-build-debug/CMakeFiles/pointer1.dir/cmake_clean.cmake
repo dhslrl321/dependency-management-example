@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/pointer1.dir/keyword_3/pointer1.c.o"
+  "CMakeFiles/pointer1.dir/c/keyword_3/pointer1.c.o"
   "pointer1"
   "pointer1.pdb"
 )

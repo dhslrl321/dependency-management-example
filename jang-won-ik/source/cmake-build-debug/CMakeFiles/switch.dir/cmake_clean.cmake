@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/switch.dir/keyword_1/switch.c.o"
+  "CMakeFiles/switch.dir/c/keyword_1/switch.c.o"
   "switch"
   "switch.pdb"
 )

@@ -76,27 +76,27 @@ include CMakeFiles/pointer1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/pointer1.dir/flags.make
 
-CMakeFiles/pointer1.dir/keyword_3/pointer1.c.o: CMakeFiles/pointer1.dir/flags.make
-CMakeFiles/pointer1.dir/keyword_3/pointer1.c.o: ../keyword_3/pointer1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/pointer1.dir/keyword_3/pointer1.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pointer1.dir/keyword_3/pointer1.c.o -c /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_3/pointer1.c
+CMakeFiles/pointer1.dir/c/keyword_3/pointer1.c.o: CMakeFiles/pointer1.dir/flags.make
+CMakeFiles/pointer1.dir/c/keyword_3/pointer1.c.o: ../c/keyword_3/pointer1.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/pointer1.dir/c/keyword_3/pointer1.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pointer1.dir/c/keyword_3/pointer1.c.o -c /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_3/pointer1.c
 
-CMakeFiles/pointer1.dir/keyword_3/pointer1.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pointer1.dir/keyword_3/pointer1.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_3/pointer1.c > CMakeFiles/pointer1.dir/keyword_3/pointer1.c.i
+CMakeFiles/pointer1.dir/c/keyword_3/pointer1.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pointer1.dir/c/keyword_3/pointer1.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_3/pointer1.c > CMakeFiles/pointer1.dir/c/keyword_3/pointer1.c.i
 
-CMakeFiles/pointer1.dir/keyword_3/pointer1.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pointer1.dir/keyword_3/pointer1.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_3/pointer1.c -o CMakeFiles/pointer1.dir/keyword_3/pointer1.c.s
+CMakeFiles/pointer1.dir/c/keyword_3/pointer1.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pointer1.dir/c/keyword_3/pointer1.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_3/pointer1.c -o CMakeFiles/pointer1.dir/c/keyword_3/pointer1.c.s
 
 # Object files for target pointer1
 pointer1_OBJECTS = \
-"CMakeFiles/pointer1.dir/keyword_3/pointer1.c.o"
+"CMakeFiles/pointer1.dir/c/keyword_3/pointer1.c.o"
 
 # External object files for target pointer1
 pointer1_EXTERNAL_OBJECTS =
 
-pointer1: CMakeFiles/pointer1.dir/keyword_3/pointer1.c.o
+pointer1: CMakeFiles/pointer1.dir/c/keyword_3/pointer1.c.o
 pointer1: CMakeFiles/pointer1.dir/build.make
 pointer1: CMakeFiles/pointer1.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable pointer1"

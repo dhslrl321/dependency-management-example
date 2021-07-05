@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_1/variables.c" "/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles/variables.dir/keyword_1/variables.c.o"
+  "/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_1/variables.c" "/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles/variables.dir/c/keyword_1/variables.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

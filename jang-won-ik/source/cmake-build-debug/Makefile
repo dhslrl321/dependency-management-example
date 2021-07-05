@@ -75,17 +75,6 @@ CMAKE_BINARY_DIR = /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-w
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -96,6 +85,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -128,6 +128,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named hello
+
+# Build rule for target.
+hello: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello
+.PHONY : hello
+
+# fast build rule for target.
+hello/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
+.PHONY : hello/fast
 
 #=============================================================================
 # Target rules for targets named struct_2
@@ -311,356 +324,356 @@ variables/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/variables.dir/build.make CMakeFiles/variables.dir/build
 .PHONY : variables/fast
 
-keyword_1/condition.o: keyword_1/condition.c.o
+c/keyword_1/condition.o: c/keyword_1/condition.c.o
 
-.PHONY : keyword_1/condition.o
-
-# target to build an object file
-keyword_1/condition.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/condition.dir/build.make CMakeFiles/condition.dir/keyword_1/condition.c.o
-.PHONY : keyword_1/condition.c.o
-
-keyword_1/condition.i: keyword_1/condition.c.i
-
-.PHONY : keyword_1/condition.i
-
-# target to preprocess a source file
-keyword_1/condition.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/condition.dir/build.make CMakeFiles/condition.dir/keyword_1/condition.c.i
-.PHONY : keyword_1/condition.c.i
-
-keyword_1/condition.s: keyword_1/condition.c.s
-
-.PHONY : keyword_1/condition.s
-
-# target to generate assembly for a file
-keyword_1/condition.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/condition.dir/build.make CMakeFiles/condition.dir/keyword_1/condition.c.s
-.PHONY : keyword_1/condition.c.s
-
-keyword_1/switch.o: keyword_1/switch.c.o
-
-.PHONY : keyword_1/switch.o
+.PHONY : c/keyword_1/condition.o
 
 # target to build an object file
-keyword_1/switch.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/switch.dir/build.make CMakeFiles/switch.dir/keyword_1/switch.c.o
-.PHONY : keyword_1/switch.c.o
+c/keyword_1/condition.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/condition.dir/build.make CMakeFiles/condition.dir/c/keyword_1/condition.c.o
+.PHONY : c/keyword_1/condition.c.o
 
-keyword_1/switch.i: keyword_1/switch.c.i
+c/keyword_1/condition.i: c/keyword_1/condition.c.i
 
-.PHONY : keyword_1/switch.i
+.PHONY : c/keyword_1/condition.i
 
 # target to preprocess a source file
-keyword_1/switch.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/switch.dir/build.make CMakeFiles/switch.dir/keyword_1/switch.c.i
-.PHONY : keyword_1/switch.c.i
+c/keyword_1/condition.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/condition.dir/build.make CMakeFiles/condition.dir/c/keyword_1/condition.c.i
+.PHONY : c/keyword_1/condition.c.i
 
-keyword_1/switch.s: keyword_1/switch.c.s
+c/keyword_1/condition.s: c/keyword_1/condition.c.s
 
-.PHONY : keyword_1/switch.s
+.PHONY : c/keyword_1/condition.s
 
 # target to generate assembly for a file
-keyword_1/switch.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/switch.dir/build.make CMakeFiles/switch.dir/keyword_1/switch.c.s
-.PHONY : keyword_1/switch.c.s
+c/keyword_1/condition.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/condition.dir/build.make CMakeFiles/condition.dir/c/keyword_1/condition.c.s
+.PHONY : c/keyword_1/condition.c.s
 
-keyword_1/variables.o: keyword_1/variables.c.o
+c/keyword_1/switch.o: c/keyword_1/switch.c.o
 
-.PHONY : keyword_1/variables.o
+.PHONY : c/keyword_1/switch.o
 
 # target to build an object file
-keyword_1/variables.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/variables.dir/build.make CMakeFiles/variables.dir/keyword_1/variables.c.o
-.PHONY : keyword_1/variables.c.o
+c/keyword_1/switch.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/switch.dir/build.make CMakeFiles/switch.dir/c/keyword_1/switch.c.o
+.PHONY : c/keyword_1/switch.c.o
 
-keyword_1/variables.i: keyword_1/variables.c.i
+c/keyword_1/switch.i: c/keyword_1/switch.c.i
 
-.PHONY : keyword_1/variables.i
+.PHONY : c/keyword_1/switch.i
 
 # target to preprocess a source file
-keyword_1/variables.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/variables.dir/build.make CMakeFiles/variables.dir/keyword_1/variables.c.i
-.PHONY : keyword_1/variables.c.i
+c/keyword_1/switch.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/switch.dir/build.make CMakeFiles/switch.dir/c/keyword_1/switch.c.i
+.PHONY : c/keyword_1/switch.c.i
 
-keyword_1/variables.s: keyword_1/variables.c.s
+c/keyword_1/switch.s: c/keyword_1/switch.c.s
 
-.PHONY : keyword_1/variables.s
+.PHONY : c/keyword_1/switch.s
 
 # target to generate assembly for a file
-keyword_1/variables.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/variables.dir/build.make CMakeFiles/variables.dir/keyword_1/variables.c.s
-.PHONY : keyword_1/variables.c.s
+c/keyword_1/switch.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/switch.dir/build.make CMakeFiles/switch.dir/c/keyword_1/switch.c.s
+.PHONY : c/keyword_1/switch.c.s
 
-keyword_2/array1.o: keyword_2/array1.c.o
+c/keyword_1/variables.o: c/keyword_1/variables.c.o
 
-.PHONY : keyword_2/array1.o
+.PHONY : c/keyword_1/variables.o
 
 # target to build an object file
-keyword_2/array1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array1.dir/build.make CMakeFiles/array1.dir/keyword_2/array1.c.o
-.PHONY : keyword_2/array1.c.o
+c/keyword_1/variables.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/variables.dir/build.make CMakeFiles/variables.dir/c/keyword_1/variables.c.o
+.PHONY : c/keyword_1/variables.c.o
 
-keyword_2/array1.i: keyword_2/array1.c.i
+c/keyword_1/variables.i: c/keyword_1/variables.c.i
 
-.PHONY : keyword_2/array1.i
+.PHONY : c/keyword_1/variables.i
 
 # target to preprocess a source file
-keyword_2/array1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array1.dir/build.make CMakeFiles/array1.dir/keyword_2/array1.c.i
-.PHONY : keyword_2/array1.c.i
+c/keyword_1/variables.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/variables.dir/build.make CMakeFiles/variables.dir/c/keyword_1/variables.c.i
+.PHONY : c/keyword_1/variables.c.i
 
-keyword_2/array1.s: keyword_2/array1.c.s
+c/keyword_1/variables.s: c/keyword_1/variables.c.s
 
-.PHONY : keyword_2/array1.s
+.PHONY : c/keyword_1/variables.s
 
 # target to generate assembly for a file
-keyword_2/array1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array1.dir/build.make CMakeFiles/array1.dir/keyword_2/array1.c.s
-.PHONY : keyword_2/array1.c.s
+c/keyword_1/variables.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/variables.dir/build.make CMakeFiles/variables.dir/c/keyword_1/variables.c.s
+.PHONY : c/keyword_1/variables.c.s
 
-keyword_2/array2.o: keyword_2/array2.c.o
+c/keyword_2/array1.o: c/keyword_2/array1.c.o
 
-.PHONY : keyword_2/array2.o
+.PHONY : c/keyword_2/array1.o
 
 # target to build an object file
-keyword_2/array2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array2.dir/build.make CMakeFiles/array2.dir/keyword_2/array2.c.o
-.PHONY : keyword_2/array2.c.o
+c/keyword_2/array1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array1.dir/build.make CMakeFiles/array1.dir/c/keyword_2/array1.c.o
+.PHONY : c/keyword_2/array1.c.o
 
-keyword_2/array2.i: keyword_2/array2.c.i
+c/keyword_2/array1.i: c/keyword_2/array1.c.i
 
-.PHONY : keyword_2/array2.i
+.PHONY : c/keyword_2/array1.i
 
 # target to preprocess a source file
-keyword_2/array2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array2.dir/build.make CMakeFiles/array2.dir/keyword_2/array2.c.i
-.PHONY : keyword_2/array2.c.i
+c/keyword_2/array1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array1.dir/build.make CMakeFiles/array1.dir/c/keyword_2/array1.c.i
+.PHONY : c/keyword_2/array1.c.i
 
-keyword_2/array2.s: keyword_2/array2.c.s
+c/keyword_2/array1.s: c/keyword_2/array1.c.s
 
-.PHONY : keyword_2/array2.s
+.PHONY : c/keyword_2/array1.s
 
 # target to generate assembly for a file
-keyword_2/array2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array2.dir/build.make CMakeFiles/array2.dir/keyword_2/array2.c.s
-.PHONY : keyword_2/array2.c.s
+c/keyword_2/array1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array1.dir/build.make CMakeFiles/array1.dir/c/keyword_2/array1.c.s
+.PHONY : c/keyword_2/array1.c.s
 
-keyword_3/array_2d_pointer.o: keyword_3/array_2d_pointer.c.o
+c/keyword_2/array2.o: c/keyword_2/array2.c.o
 
-.PHONY : keyword_3/array_2d_pointer.o
+.PHONY : c/keyword_2/array2.o
 
 # target to build an object file
-keyword_3/array_2d_pointer.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer.dir/build.make CMakeFiles/array_2d_pointer.dir/keyword_3/array_2d_pointer.c.o
-.PHONY : keyword_3/array_2d_pointer.c.o
+c/keyword_2/array2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array2.dir/build.make CMakeFiles/array2.dir/c/keyword_2/array2.c.o
+.PHONY : c/keyword_2/array2.c.o
 
-keyword_3/array_2d_pointer.i: keyword_3/array_2d_pointer.c.i
+c/keyword_2/array2.i: c/keyword_2/array2.c.i
 
-.PHONY : keyword_3/array_2d_pointer.i
+.PHONY : c/keyword_2/array2.i
 
 # target to preprocess a source file
-keyword_3/array_2d_pointer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer.dir/build.make CMakeFiles/array_2d_pointer.dir/keyword_3/array_2d_pointer.c.i
-.PHONY : keyword_3/array_2d_pointer.c.i
+c/keyword_2/array2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array2.dir/build.make CMakeFiles/array2.dir/c/keyword_2/array2.c.i
+.PHONY : c/keyword_2/array2.c.i
 
-keyword_3/array_2d_pointer.s: keyword_3/array_2d_pointer.c.s
+c/keyword_2/array2.s: c/keyword_2/array2.c.s
 
-.PHONY : keyword_3/array_2d_pointer.s
+.PHONY : c/keyword_2/array2.s
 
 # target to generate assembly for a file
-keyword_3/array_2d_pointer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer.dir/build.make CMakeFiles/array_2d_pointer.dir/keyword_3/array_2d_pointer.c.s
-.PHONY : keyword_3/array_2d_pointer.c.s
+c/keyword_2/array2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array2.dir/build.make CMakeFiles/array2.dir/c/keyword_2/array2.c.s
+.PHONY : c/keyword_2/array2.c.s
 
-keyword_3/array_2d_pointer_2.o: keyword_3/array_2d_pointer_2.c.o
+c/keyword_3/array_2d_pointer.o: c/keyword_3/array_2d_pointer.c.o
 
-.PHONY : keyword_3/array_2d_pointer_2.o
+.PHONY : c/keyword_3/array_2d_pointer.o
 
 # target to build an object file
-keyword_3/array_2d_pointer_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer_2.dir/build.make CMakeFiles/array_2d_pointer_2.dir/keyword_3/array_2d_pointer_2.c.o
-.PHONY : keyword_3/array_2d_pointer_2.c.o
+c/keyword_3/array_2d_pointer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer.dir/build.make CMakeFiles/array_2d_pointer.dir/c/keyword_3/array_2d_pointer.c.o
+.PHONY : c/keyword_3/array_2d_pointer.c.o
 
-keyword_3/array_2d_pointer_2.i: keyword_3/array_2d_pointer_2.c.i
+c/keyword_3/array_2d_pointer.i: c/keyword_3/array_2d_pointer.c.i
 
-.PHONY : keyword_3/array_2d_pointer_2.i
+.PHONY : c/keyword_3/array_2d_pointer.i
 
 # target to preprocess a source file
-keyword_3/array_2d_pointer_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer_2.dir/build.make CMakeFiles/array_2d_pointer_2.dir/keyword_3/array_2d_pointer_2.c.i
-.PHONY : keyword_3/array_2d_pointer_2.c.i
+c/keyword_3/array_2d_pointer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer.dir/build.make CMakeFiles/array_2d_pointer.dir/c/keyword_3/array_2d_pointer.c.i
+.PHONY : c/keyword_3/array_2d_pointer.c.i
 
-keyword_3/array_2d_pointer_2.s: keyword_3/array_2d_pointer_2.c.s
+c/keyword_3/array_2d_pointer.s: c/keyword_3/array_2d_pointer.c.s
 
-.PHONY : keyword_3/array_2d_pointer_2.s
+.PHONY : c/keyword_3/array_2d_pointer.s
 
 # target to generate assembly for a file
-keyword_3/array_2d_pointer_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer_2.dir/build.make CMakeFiles/array_2d_pointer_2.dir/keyword_3/array_2d_pointer_2.c.s
-.PHONY : keyword_3/array_2d_pointer_2.c.s
+c/keyword_3/array_2d_pointer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer.dir/build.make CMakeFiles/array_2d_pointer.dir/c/keyword_3/array_2d_pointer.c.s
+.PHONY : c/keyword_3/array_2d_pointer.c.s
 
-keyword_3/array_pointer.o: keyword_3/array_pointer.c.o
+c/keyword_3/array_2d_pointer_2.o: c/keyword_3/array_2d_pointer_2.c.o
 
-.PHONY : keyword_3/array_pointer.o
+.PHONY : c/keyword_3/array_2d_pointer_2.o
 
 # target to build an object file
-keyword_3/array_pointer.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer.dir/build.make CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.o
-.PHONY : keyword_3/array_pointer.c.o
+c/keyword_3/array_2d_pointer_2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer_2.dir/build.make CMakeFiles/array_2d_pointer_2.dir/c/keyword_3/array_2d_pointer_2.c.o
+.PHONY : c/keyword_3/array_2d_pointer_2.c.o
 
-keyword_3/array_pointer.i: keyword_3/array_pointer.c.i
+c/keyword_3/array_2d_pointer_2.i: c/keyword_3/array_2d_pointer_2.c.i
 
-.PHONY : keyword_3/array_pointer.i
+.PHONY : c/keyword_3/array_2d_pointer_2.i
 
 # target to preprocess a source file
-keyword_3/array_pointer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer.dir/build.make CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.i
-.PHONY : keyword_3/array_pointer.c.i
+c/keyword_3/array_2d_pointer_2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer_2.dir/build.make CMakeFiles/array_2d_pointer_2.dir/c/keyword_3/array_2d_pointer_2.c.i
+.PHONY : c/keyword_3/array_2d_pointer_2.c.i
 
-keyword_3/array_pointer.s: keyword_3/array_pointer.c.s
+c/keyword_3/array_2d_pointer_2.s: c/keyword_3/array_2d_pointer_2.c.s
 
-.PHONY : keyword_3/array_pointer.s
+.PHONY : c/keyword_3/array_2d_pointer_2.s
 
 # target to generate assembly for a file
-keyword_3/array_pointer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer.dir/build.make CMakeFiles/array_pointer.dir/keyword_3/array_pointer.c.s
-.PHONY : keyword_3/array_pointer.c.s
+c/keyword_3/array_2d_pointer_2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_2d_pointer_2.dir/build.make CMakeFiles/array_2d_pointer_2.dir/c/keyword_3/array_2d_pointer_2.c.s
+.PHONY : c/keyword_3/array_2d_pointer_2.c.s
 
-keyword_3/array_pointer_2.o: keyword_3/array_pointer_2.c.o
+c/keyword_3/array_pointer.o: c/keyword_3/array_pointer.c.o
 
-.PHONY : keyword_3/array_pointer_2.o
+.PHONY : c/keyword_3/array_pointer.o
 
 # target to build an object file
-keyword_3/array_pointer_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer_2.dir/build.make CMakeFiles/array_pointer_2.dir/keyword_3/array_pointer_2.c.o
-.PHONY : keyword_3/array_pointer_2.c.o
+c/keyword_3/array_pointer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer.dir/build.make CMakeFiles/array_pointer.dir/c/keyword_3/array_pointer.c.o
+.PHONY : c/keyword_3/array_pointer.c.o
 
-keyword_3/array_pointer_2.i: keyword_3/array_pointer_2.c.i
+c/keyword_3/array_pointer.i: c/keyword_3/array_pointer.c.i
 
-.PHONY : keyword_3/array_pointer_2.i
+.PHONY : c/keyword_3/array_pointer.i
 
 # target to preprocess a source file
-keyword_3/array_pointer_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer_2.dir/build.make CMakeFiles/array_pointer_2.dir/keyword_3/array_pointer_2.c.i
-.PHONY : keyword_3/array_pointer_2.c.i
+c/keyword_3/array_pointer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer.dir/build.make CMakeFiles/array_pointer.dir/c/keyword_3/array_pointer.c.i
+.PHONY : c/keyword_3/array_pointer.c.i
 
-keyword_3/array_pointer_2.s: keyword_3/array_pointer_2.c.s
+c/keyword_3/array_pointer.s: c/keyword_3/array_pointer.c.s
 
-.PHONY : keyword_3/array_pointer_2.s
+.PHONY : c/keyword_3/array_pointer.s
 
 # target to generate assembly for a file
-keyword_3/array_pointer_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer_2.dir/build.make CMakeFiles/array_pointer_2.dir/keyword_3/array_pointer_2.c.s
-.PHONY : keyword_3/array_pointer_2.c.s
+c/keyword_3/array_pointer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer.dir/build.make CMakeFiles/array_pointer.dir/c/keyword_3/array_pointer.c.s
+.PHONY : c/keyword_3/array_pointer.c.s
 
-keyword_3/pointer1.o: keyword_3/pointer1.c.o
+c/keyword_3/array_pointer_2.o: c/keyword_3/array_pointer_2.c.o
 
-.PHONY : keyword_3/pointer1.o
+.PHONY : c/keyword_3/array_pointer_2.o
 
 # target to build an object file
-keyword_3/pointer1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pointer1.dir/build.make CMakeFiles/pointer1.dir/keyword_3/pointer1.c.o
-.PHONY : keyword_3/pointer1.c.o
+c/keyword_3/array_pointer_2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer_2.dir/build.make CMakeFiles/array_pointer_2.dir/c/keyword_3/array_pointer_2.c.o
+.PHONY : c/keyword_3/array_pointer_2.c.o
 
-keyword_3/pointer1.i: keyword_3/pointer1.c.i
+c/keyword_3/array_pointer_2.i: c/keyword_3/array_pointer_2.c.i
 
-.PHONY : keyword_3/pointer1.i
+.PHONY : c/keyword_3/array_pointer_2.i
 
 # target to preprocess a source file
-keyword_3/pointer1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pointer1.dir/build.make CMakeFiles/pointer1.dir/keyword_3/pointer1.c.i
-.PHONY : keyword_3/pointer1.c.i
+c/keyword_3/array_pointer_2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer_2.dir/build.make CMakeFiles/array_pointer_2.dir/c/keyword_3/array_pointer_2.c.i
+.PHONY : c/keyword_3/array_pointer_2.c.i
 
-keyword_3/pointer1.s: keyword_3/pointer1.c.s
+c/keyword_3/array_pointer_2.s: c/keyword_3/array_pointer_2.c.s
 
-.PHONY : keyword_3/pointer1.s
+.PHONY : c/keyword_3/array_pointer_2.s
 
 # target to generate assembly for a file
-keyword_3/pointer1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pointer1.dir/build.make CMakeFiles/pointer1.dir/keyword_3/pointer1.c.s
-.PHONY : keyword_3/pointer1.c.s
+c/keyword_3/array_pointer_2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/array_pointer_2.dir/build.make CMakeFiles/array_pointer_2.dir/c/keyword_3/array_pointer_2.c.s
+.PHONY : c/keyword_3/array_pointer_2.c.s
 
-keyword_4/malloc_use.o: keyword_4/malloc_use.c.o
+c/keyword_3/pointer1.o: c/keyword_3/pointer1.c.o
 
-.PHONY : keyword_4/malloc_use.o
+.PHONY : c/keyword_3/pointer1.o
 
 # target to build an object file
-keyword_4/malloc_use.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/keyword_4/malloc_use.c.o
-.PHONY : keyword_4/malloc_use.c.o
+c/keyword_3/pointer1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pointer1.dir/build.make CMakeFiles/pointer1.dir/c/keyword_3/pointer1.c.o
+.PHONY : c/keyword_3/pointer1.c.o
 
-keyword_4/malloc_use.i: keyword_4/malloc_use.c.i
+c/keyword_3/pointer1.i: c/keyword_3/pointer1.c.i
 
-.PHONY : keyword_4/malloc_use.i
+.PHONY : c/keyword_3/pointer1.i
 
 # target to preprocess a source file
-keyword_4/malloc_use.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/keyword_4/malloc_use.c.i
-.PHONY : keyword_4/malloc_use.c.i
+c/keyword_3/pointer1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pointer1.dir/build.make CMakeFiles/pointer1.dir/c/keyword_3/pointer1.c.i
+.PHONY : c/keyword_3/pointer1.c.i
 
-keyword_4/malloc_use.s: keyword_4/malloc_use.c.s
+c/keyword_3/pointer1.s: c/keyword_3/pointer1.c.s
 
-.PHONY : keyword_4/malloc_use.s
+.PHONY : c/keyword_3/pointer1.s
 
 # target to generate assembly for a file
-keyword_4/malloc_use.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/keyword_4/malloc_use.c.s
-.PHONY : keyword_4/malloc_use.c.s
+c/keyword_3/pointer1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pointer1.dir/build.make CMakeFiles/pointer1.dir/c/keyword_3/pointer1.c.s
+.PHONY : c/keyword_3/pointer1.c.s
 
-keyword_5/struct.o: keyword_5/struct.c.o
+c/keyword_4/malloc_use.o: c/keyword_4/malloc_use.c.o
 
-.PHONY : keyword_5/struct.o
+.PHONY : c/keyword_4/malloc_use.o
 
 # target to build an object file
-keyword_5/struct.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct.dir/build.make CMakeFiles/struct.dir/keyword_5/struct.c.o
-.PHONY : keyword_5/struct.c.o
+c/keyword_4/malloc_use.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/c/keyword_4/malloc_use.c.o
+.PHONY : c/keyword_4/malloc_use.c.o
 
-keyword_5/struct.i: keyword_5/struct.c.i
+c/keyword_4/malloc_use.i: c/keyword_4/malloc_use.c.i
 
-.PHONY : keyword_5/struct.i
+.PHONY : c/keyword_4/malloc_use.i
 
 # target to preprocess a source file
-keyword_5/struct.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct.dir/build.make CMakeFiles/struct.dir/keyword_5/struct.c.i
-.PHONY : keyword_5/struct.c.i
+c/keyword_4/malloc_use.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/c/keyword_4/malloc_use.c.i
+.PHONY : c/keyword_4/malloc_use.c.i
 
-keyword_5/struct.s: keyword_5/struct.c.s
+c/keyword_4/malloc_use.s: c/keyword_4/malloc_use.c.s
 
-.PHONY : keyword_5/struct.s
+.PHONY : c/keyword_4/malloc_use.s
 
 # target to generate assembly for a file
-keyword_5/struct.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct.dir/build.make CMakeFiles/struct.dir/keyword_5/struct.c.s
-.PHONY : keyword_5/struct.c.s
+c/keyword_4/malloc_use.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/string.dir/build.make CMakeFiles/string.dir/c/keyword_4/malloc_use.c.s
+.PHONY : c/keyword_4/malloc_use.c.s
 
-keyword_5/struct_2.o: keyword_5/struct_2.c.o
+c/keyword_5/struct.o: c/keyword_5/struct.c.o
 
-.PHONY : keyword_5/struct_2.o
+.PHONY : c/keyword_5/struct.o
 
 # target to build an object file
-keyword_5/struct_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct_2.dir/build.make CMakeFiles/struct_2.dir/keyword_5/struct_2.c.o
-.PHONY : keyword_5/struct_2.c.o
+c/keyword_5/struct.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct.dir/build.make CMakeFiles/struct.dir/c/keyword_5/struct.c.o
+.PHONY : c/keyword_5/struct.c.o
 
-keyword_5/struct_2.i: keyword_5/struct_2.c.i
+c/keyword_5/struct.i: c/keyword_5/struct.c.i
 
-.PHONY : keyword_5/struct_2.i
+.PHONY : c/keyword_5/struct.i
 
 # target to preprocess a source file
-keyword_5/struct_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct_2.dir/build.make CMakeFiles/struct_2.dir/keyword_5/struct_2.c.i
-.PHONY : keyword_5/struct_2.c.i
+c/keyword_5/struct.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct.dir/build.make CMakeFiles/struct.dir/c/keyword_5/struct.c.i
+.PHONY : c/keyword_5/struct.c.i
 
-keyword_5/struct_2.s: keyword_5/struct_2.c.s
+c/keyword_5/struct.s: c/keyword_5/struct.c.s
 
-.PHONY : keyword_5/struct_2.s
+.PHONY : c/keyword_5/struct.s
 
 # target to generate assembly for a file
-keyword_5/struct_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct_2.dir/build.make CMakeFiles/struct_2.dir/keyword_5/struct_2.c.s
-.PHONY : keyword_5/struct_2.c.s
+c/keyword_5/struct.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct.dir/build.make CMakeFiles/struct.dir/c/keyword_5/struct.c.s
+.PHONY : c/keyword_5/struct.c.s
+
+c/keyword_5/struct_2.o: c/keyword_5/struct_2.c.o
+
+.PHONY : c/keyword_5/struct_2.o
+
+# target to build an object file
+c/keyword_5/struct_2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct_2.dir/build.make CMakeFiles/struct_2.dir/c/keyword_5/struct_2.c.o
+.PHONY : c/keyword_5/struct_2.c.o
+
+c/keyword_5/struct_2.i: c/keyword_5/struct_2.c.i
+
+.PHONY : c/keyword_5/struct_2.i
+
+# target to preprocess a source file
+c/keyword_5/struct_2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct_2.dir/build.make CMakeFiles/struct_2.dir/c/keyword_5/struct_2.c.i
+.PHONY : c/keyword_5/struct_2.c.i
+
+c/keyword_5/struct_2.s: c/keyword_5/struct_2.c.s
+
+.PHONY : c/keyword_5/struct_2.s
+
+# target to generate assembly for a file
+c/keyword_5/struct_2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/struct_2.dir/build.make CMakeFiles/struct_2.dir/c/keyword_5/struct_2.c.s
+.PHONY : c/keyword_5/struct_2.c.s
 
 main.o: main.c.o
 
@@ -704,6 +717,7 @@ help:
 	@echo "... array_pointer"
 	@echo "... array_pointer_2"
 	@echo "... condition"
+	@echo "... hello"
 	@echo "... main"
 	@echo "... pointer1"
 	@echo "... string"
@@ -711,45 +725,45 @@ help:
 	@echo "... struct_2"
 	@echo "... switch"
 	@echo "... variables"
-	@echo "... keyword_1/condition.o"
-	@echo "... keyword_1/condition.i"
-	@echo "... keyword_1/condition.s"
-	@echo "... keyword_1/switch.o"
-	@echo "... keyword_1/switch.i"
-	@echo "... keyword_1/switch.s"
-	@echo "... keyword_1/variables.o"
-	@echo "... keyword_1/variables.i"
-	@echo "... keyword_1/variables.s"
-	@echo "... keyword_2/array1.o"
-	@echo "... keyword_2/array1.i"
-	@echo "... keyword_2/array1.s"
-	@echo "... keyword_2/array2.o"
-	@echo "... keyword_2/array2.i"
-	@echo "... keyword_2/array2.s"
-	@echo "... keyword_3/array_2d_pointer.o"
-	@echo "... keyword_3/array_2d_pointer.i"
-	@echo "... keyword_3/array_2d_pointer.s"
-	@echo "... keyword_3/array_2d_pointer_2.o"
-	@echo "... keyword_3/array_2d_pointer_2.i"
-	@echo "... keyword_3/array_2d_pointer_2.s"
-	@echo "... keyword_3/array_pointer.o"
-	@echo "... keyword_3/array_pointer.i"
-	@echo "... keyword_3/array_pointer.s"
-	@echo "... keyword_3/array_pointer_2.o"
-	@echo "... keyword_3/array_pointer_2.i"
-	@echo "... keyword_3/array_pointer_2.s"
-	@echo "... keyword_3/pointer1.o"
-	@echo "... keyword_3/pointer1.i"
-	@echo "... keyword_3/pointer1.s"
-	@echo "... keyword_4/malloc_use.o"
-	@echo "... keyword_4/malloc_use.i"
-	@echo "... keyword_4/malloc_use.s"
-	@echo "... keyword_5/struct.o"
-	@echo "... keyword_5/struct.i"
-	@echo "... keyword_5/struct.s"
-	@echo "... keyword_5/struct_2.o"
-	@echo "... keyword_5/struct_2.i"
-	@echo "... keyword_5/struct_2.s"
+	@echo "... c/keyword_1/condition.o"
+	@echo "... c/keyword_1/condition.i"
+	@echo "... c/keyword_1/condition.s"
+	@echo "... c/keyword_1/switch.o"
+	@echo "... c/keyword_1/switch.i"
+	@echo "... c/keyword_1/switch.s"
+	@echo "... c/keyword_1/variables.o"
+	@echo "... c/keyword_1/variables.i"
+	@echo "... c/keyword_1/variables.s"
+	@echo "... c/keyword_2/array1.o"
+	@echo "... c/keyword_2/array1.i"
+	@echo "... c/keyword_2/array1.s"
+	@echo "... c/keyword_2/array2.o"
+	@echo "... c/keyword_2/array2.i"
+	@echo "... c/keyword_2/array2.s"
+	@echo "... c/keyword_3/array_2d_pointer.o"
+	@echo "... c/keyword_3/array_2d_pointer.i"
+	@echo "... c/keyword_3/array_2d_pointer.s"
+	@echo "... c/keyword_3/array_2d_pointer_2.o"
+	@echo "... c/keyword_3/array_2d_pointer_2.i"
+	@echo "... c/keyword_3/array_2d_pointer_2.s"
+	@echo "... c/keyword_3/array_pointer.o"
+	@echo "... c/keyword_3/array_pointer.i"
+	@echo "... c/keyword_3/array_pointer.s"
+	@echo "... c/keyword_3/array_pointer_2.o"
+	@echo "... c/keyword_3/array_pointer_2.i"
+	@echo "... c/keyword_3/array_pointer_2.s"
+	@echo "... c/keyword_3/pointer1.o"
+	@echo "... c/keyword_3/pointer1.i"
+	@echo "... c/keyword_3/pointer1.s"
+	@echo "... c/keyword_4/malloc_use.o"
+	@echo "... c/keyword_4/malloc_use.i"
+	@echo "... c/keyword_4/malloc_use.s"
+	@echo "... c/keyword_5/struct.o"
+	@echo "... c/keyword_5/struct.i"
+	@echo "... c/keyword_5/struct.s"
+	@echo "... c/keyword_5/struct_2.o"
+	@echo "... c/keyword_5/struct_2.i"
+	@echo "... c/keyword_5/struct_2.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

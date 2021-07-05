@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/array_2d_pointer.dir/keyword_3/array_2d_pointer.c.o"
+  "CMakeFiles/array_2d_pointer.dir/c/keyword_3/array_2d_pointer.c.o"
   "array_2d_pointer"
   "array_2d_pointer.pdb"
 )

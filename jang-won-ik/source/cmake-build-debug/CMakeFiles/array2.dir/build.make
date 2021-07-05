@@ -76,27 +76,27 @@ include CMakeFiles/array2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/array2.dir/flags.make
 
-CMakeFiles/array2.dir/keyword_2/array2.c.o: CMakeFiles/array2.dir/flags.make
-CMakeFiles/array2.dir/keyword_2/array2.c.o: ../keyword_2/array2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/array2.dir/keyword_2/array2.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/array2.dir/keyword_2/array2.c.o -c /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_2/array2.c
+CMakeFiles/array2.dir/c/keyword_2/array2.c.o: CMakeFiles/array2.dir/flags.make
+CMakeFiles/array2.dir/c/keyword_2/array2.c.o: ../c/keyword_2/array2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/array2.dir/c/keyword_2/array2.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/array2.dir/c/keyword_2/array2.c.o -c /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_2/array2.c
 
-CMakeFiles/array2.dir/keyword_2/array2.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/array2.dir/keyword_2/array2.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_2/array2.c > CMakeFiles/array2.dir/keyword_2/array2.c.i
+CMakeFiles/array2.dir/c/keyword_2/array2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/array2.dir/c/keyword_2/array2.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_2/array2.c > CMakeFiles/array2.dir/c/keyword_2/array2.c.i
 
-CMakeFiles/array2.dir/keyword_2/array2.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/array2.dir/keyword_2/array2.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_2/array2.c -o CMakeFiles/array2.dir/keyword_2/array2.c.s
+CMakeFiles/array2.dir/c/keyword_2/array2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/array2.dir/c/keyword_2/array2.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_2/array2.c -o CMakeFiles/array2.dir/c/keyword_2/array2.c.s
 
 # Object files for target array2
 array2_OBJECTS = \
-"CMakeFiles/array2.dir/keyword_2/array2.c.o"
+"CMakeFiles/array2.dir/c/keyword_2/array2.c.o"
 
 # External object files for target array2
 array2_EXTERNAL_OBJECTS =
 
-array2: CMakeFiles/array2.dir/keyword_2/array2.c.o
+array2: CMakeFiles/array2.dir/c/keyword_2/array2.c.o
 array2: CMakeFiles/array2.dir/build.make
 array2: CMakeFiles/array2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable array2"

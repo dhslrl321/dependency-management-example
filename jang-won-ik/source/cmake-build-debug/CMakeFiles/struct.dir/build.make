@@ -76,27 +76,27 @@ include CMakeFiles/struct.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/struct.dir/flags.make
 
-CMakeFiles/struct.dir/keyword_5/struct.c.o: CMakeFiles/struct.dir/flags.make
-CMakeFiles/struct.dir/keyword_5/struct.c.o: ../keyword_5/struct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/struct.dir/keyword_5/struct.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/struct.dir/keyword_5/struct.c.o -c /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_5/struct.c
+CMakeFiles/struct.dir/c/keyword_5/struct.c.o: CMakeFiles/struct.dir/flags.make
+CMakeFiles/struct.dir/c/keyword_5/struct.c.o: ../c/keyword_5/struct.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/struct.dir/c/keyword_5/struct.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/struct.dir/c/keyword_5/struct.c.o -c /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_5/struct.c
 
-CMakeFiles/struct.dir/keyword_5/struct.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/struct.dir/keyword_5/struct.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_5/struct.c > CMakeFiles/struct.dir/keyword_5/struct.c.i
+CMakeFiles/struct.dir/c/keyword_5/struct.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/struct.dir/c/keyword_5/struct.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_5/struct.c > CMakeFiles/struct.dir/c/keyword_5/struct.c.i
 
-CMakeFiles/struct.dir/keyword_5/struct.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/struct.dir/keyword_5/struct.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_5/struct.c -o CMakeFiles/struct.dir/keyword_5/struct.c.s
+CMakeFiles/struct.dir/c/keyword_5/struct.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/struct.dir/c/keyword_5/struct.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_5/struct.c -o CMakeFiles/struct.dir/c/keyword_5/struct.c.s
 
 # Object files for target struct
 struct_OBJECTS = \
-"CMakeFiles/struct.dir/keyword_5/struct.c.o"
+"CMakeFiles/struct.dir/c/keyword_5/struct.c.o"
 
 # External object files for target struct
 struct_EXTERNAL_OBJECTS =
 
-struct: CMakeFiles/struct.dir/keyword_5/struct.c.o
+struct: CMakeFiles/struct.dir/c/keyword_5/struct.c.o
 struct: CMakeFiles/struct.dir/build.make
 struct: CMakeFiles/struct.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable struct"

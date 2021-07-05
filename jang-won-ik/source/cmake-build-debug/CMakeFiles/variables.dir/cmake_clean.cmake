@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/variables.dir/keyword_1/variables.c.o"
+  "CMakeFiles/variables.dir/c/keyword_1/variables.c.o"
   "variables"
   "variables.pdb"
 )

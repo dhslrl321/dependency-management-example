@@ -76,27 +76,27 @@ include CMakeFiles/condition.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/condition.dir/flags.make
 
-CMakeFiles/condition.dir/keyword_1/condition.c.o: CMakeFiles/condition.dir/flags.make
-CMakeFiles/condition.dir/keyword_1/condition.c.o: ../keyword_1/condition.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/condition.dir/keyword_1/condition.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/condition.dir/keyword_1/condition.c.o -c /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_1/condition.c
+CMakeFiles/condition.dir/c/keyword_1/condition.c.o: CMakeFiles/condition.dir/flags.make
+CMakeFiles/condition.dir/c/keyword_1/condition.c.o: ../c/keyword_1/condition.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/condition.dir/c/keyword_1/condition.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/condition.dir/c/keyword_1/condition.c.o -c /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_1/condition.c
 
-CMakeFiles/condition.dir/keyword_1/condition.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/condition.dir/keyword_1/condition.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_1/condition.c > CMakeFiles/condition.dir/keyword_1/condition.c.i
+CMakeFiles/condition.dir/c/keyword_1/condition.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/condition.dir/c/keyword_1/condition.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_1/condition.c > CMakeFiles/condition.dir/c/keyword_1/condition.c.i
 
-CMakeFiles/condition.dir/keyword_1/condition.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/condition.dir/keyword_1/condition.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_1/condition.c -o CMakeFiles/condition.dir/keyword_1/condition.c.s
+CMakeFiles/condition.dir/c/keyword_1/condition.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/condition.dir/c/keyword_1/condition.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_1/condition.c -o CMakeFiles/condition.dir/c/keyword_1/condition.c.s
 
 # Object files for target condition
 condition_OBJECTS = \
-"CMakeFiles/condition.dir/keyword_1/condition.c.o"
+"CMakeFiles/condition.dir/c/keyword_1/condition.c.o"
 
 # External object files for target condition
 condition_EXTERNAL_OBJECTS =
 
-condition: CMakeFiles/condition.dir/keyword_1/condition.c.o
+condition: CMakeFiles/condition.dir/c/keyword_1/condition.c.o
 condition: CMakeFiles/condition.dir/build.make
 condition: CMakeFiles/condition.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable condition"

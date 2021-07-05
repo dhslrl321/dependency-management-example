@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/struct.dir/keyword_5/struct.c.o"
+  "CMakeFiles/struct.dir/c/keyword_5/struct.c.o"
   "struct"
   "struct.pdb"
 )

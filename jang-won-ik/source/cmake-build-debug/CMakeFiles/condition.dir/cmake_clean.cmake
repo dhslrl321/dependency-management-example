@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/condition.dir/keyword_1/condition.c.o"
+  "CMakeFiles/condition.dir/c/keyword_1/condition.c.o"
   "condition"
   "condition.pdb"
 )

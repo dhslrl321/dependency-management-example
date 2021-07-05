@@ -17,6 +17,16 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug"/>
 				<Option type="4"/>
@@ -27,11 +37,41 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="edit_cache">
+			<Target title="hello">
+				<Option output="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/hello" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug"/>
-				<Option type="4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 hello"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hello/fast">
+				<Option output="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/hello" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 hello/fast"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -598,44 +638,47 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_1/condition.c">
+		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_1/condition.c">
 			<Option target="condition"/>
 		</Unit>
-		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_1/switch.c">
+		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_1/switch.c">
 			<Option target="switch"/>
 		</Unit>
-		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_1/variables.c">
+		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_1/variables.c">
 			<Option target="variables"/>
 		</Unit>
-		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_2/array1.c">
+		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_2/array1.c">
 			<Option target="array1"/>
 		</Unit>
-		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_2/array2.c">
+		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_2/array2.c">
 			<Option target="array2"/>
 		</Unit>
-		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_3/array_2d_pointer.c">
+		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_3/array_2d_pointer.c">
 			<Option target="array_2d_pointer"/>
 		</Unit>
-		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_3/array_2d_pointer_2.c">
+		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_3/array_2d_pointer_2.c">
 			<Option target="array_2d_pointer_2"/>
 		</Unit>
-		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_3/array_pointer.c">
+		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_3/array_pointer.c">
 			<Option target="array_pointer"/>
 		</Unit>
-		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_3/array_pointer_2.c">
+		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_3/array_pointer_2.c">
 			<Option target="array_pointer_2"/>
 		</Unit>
-		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_3/pointer1.c">
+		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_3/pointer1.c">
 			<Option target="pointer1"/>
 		</Unit>
-		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_4/malloc_use.c">
+		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_4/malloc_use.c">
 			<Option target="string"/>
 		</Unit>
-		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_5/struct.c">
+		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_5/struct.c">
 			<Option target="struct"/>
 		</Unit>
-		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/keyword_5/struct_2.c">
+		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/c/keyword_5/struct_2.c">
 			<Option target="struct_2"/>
+		</Unit>
+		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/cpp/keyword_1/hello.cpp">
+			<Option target="hello"/>
 		</Unit>
 		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source/main.c">
 			<Option target="main"/>

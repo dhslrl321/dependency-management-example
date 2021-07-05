@@ -1,0 +1,10 @@
+# 파일 나누기
+
+- 전처리기 구문
+  - `#include`
+  - `#define`
+  - `#ifdef`
+  - `#endif`
+  - `#else`
+
+# 헤더 파일
