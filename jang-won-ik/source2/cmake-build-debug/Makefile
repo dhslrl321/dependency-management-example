@@ -130,19 +130,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named cin_getline
-
-# Build rule for target.
-cin_getline: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cin_getline
-.PHONY : cin_getline
-
-# fast build rule for target.
-cin_getline/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cin_getline.dir/build.make CMakeFiles/cin_getline.dir/build
-.PHONY : cin_getline/fast
-
-#=============================================================================
 # Target rules for targets named io
 
 # Build rule for target.
@@ -154,6 +141,32 @@ io: cmake_check_build_system
 io/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/io.dir/build.make CMakeFiles/io.dir/build
 .PHONY : io/fast
+
+#=============================================================================
+# Target rules for targets named Circle
+
+# Build rule for target.
+Circle: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Circle
+.PHONY : Circle
+
+# fast build rule for target.
+Circle/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Circle.dir/build.make CMakeFiles/Circle.dir/build
+.PHONY : Circle/fast
+
+#=============================================================================
+# Target rules for targets named cin_getline
+
+# Build rule for target.
+cin_getline: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cin_getline
+.PHONY : cin_getline
+
+# fast build rule for target.
+cin_getline/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cin_getline.dir/build.make CMakeFiles/cin_getline.dir/build
+.PHONY : cin_getline/fast
 
 #=============================================================================
 # Target rules for targets named input
@@ -262,6 +275,33 @@ keyword_1/namespace.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/io.dir/build.make CMakeFiles/io.dir/keyword_1/namespace.cpp.s
 .PHONY : keyword_1/namespace.cpp.s
 
+keyword_2/Circle.o: keyword_2/Circle.cpp.o
+
+.PHONY : keyword_2/Circle.o
+
+# target to build an object file
+keyword_2/Circle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Circle.dir/build.make CMakeFiles/Circle.dir/keyword_2/Circle.cpp.o
+.PHONY : keyword_2/Circle.cpp.o
+
+keyword_2/Circle.i: keyword_2/Circle.cpp.i
+
+.PHONY : keyword_2/Circle.i
+
+# target to preprocess a source file
+keyword_2/Circle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Circle.dir/build.make CMakeFiles/Circle.dir/keyword_2/Circle.cpp.i
+.PHONY : keyword_2/Circle.cpp.i
+
+keyword_2/Circle.s: keyword_2/Circle.cpp.s
+
+.PHONY : keyword_2/Circle.s
+
+# target to generate assembly for a file
+keyword_2/Circle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Circle.dir/build.make CMakeFiles/Circle.dir/keyword_2/Circle.cpp.s
+.PHONY : keyword_2/Circle.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -297,6 +337,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Circle"
 	@echo "... cin_getline"
 	@echo "... input"
 	@echo "... io"
@@ -310,6 +351,9 @@ help:
 	@echo "... keyword_1/namespace.o"
 	@echo "... keyword_1/namespace.i"
 	@echo "... keyword_1/namespace.s"
+	@echo "... keyword_2/Circle.o"
+	@echo "... keyword_2/Circle.i"
+	@echo "... keyword_2/Circle.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -37,48 +37,6 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="cin_getline">
-				<Option output="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/cin_getline" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 cin_getline"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="cin_getline/fast">
-				<Option output="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/cin_getline" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 cin_getline/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="io">
 				<Option output="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/io" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug"/>
@@ -116,6 +74,90 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 io/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Circle">
+				<Option output="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Circle" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 Circle"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Circle/fast">
+				<Option output="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Circle" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 Circle/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cin_getline">
+				<Option output="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/cin_getline" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 cin_getline"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cin_getline/fast">
+				<Option output="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/cin_getline" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 cin_getline/fast"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -214,6 +256,12 @@
 		</Unit>
 		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/keyword_1/namespace.cpp">
 			<Option target="io"/>
+		</Unit>
+		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/keyword_2/Circle.cpp">
+			<Option target="Circle"/>
+		</Unit>
+		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/keyword_2/Circle.h">
+			<Option target="Circle"/>
 		</Unit>
 		<Unit filename="/Users/jangwonik/Desktop/git_repository/C-Language-Lab/jang-won-ik/source2/main.cpp">
 			<Option target="source2"/>

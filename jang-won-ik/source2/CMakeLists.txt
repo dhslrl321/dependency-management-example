@@ -8,3 +8,4 @@ add_executable(io keyword_1/namespace.cpp)
 
 add_executable(input keyword_1/input.cpp)
 add_executable(cin_getline keyword_1/cin_getline.cpp)
+add_executable(Circle keyword_2/Circle.cpp)
