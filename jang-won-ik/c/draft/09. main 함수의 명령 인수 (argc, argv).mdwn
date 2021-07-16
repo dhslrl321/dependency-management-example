@@ -1,0 +1,32 @@
+- main 함수에서 실행 파일 옵션 받기
+- main 함수의 실행 옵션으로 파일 넘기기 (argc, argv)
+
+# main 함수
+
+- `main()` => 프로그램의 진입점
+- main 함수는 경우에 따라서 매개변수가 존재하는 경우와 존재하지 않는 경우가 있음
+  - 매개변수가 존재하지 않는 경우
+    - `int main() { }`
+  - 매개변수가 존재하는 경우
+    - 프로그램 실행 옵션으로 특정 옵션(데이터)을 넣는 경우
+    - `int main(int argc, char *argv[]) { }`
+
+## main 함수에 매개변수가 있는 형태
+
+```c
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+  return 0;
+}
+```
+
+### argc
+
+- 옵션의 개수
+
+### `*`argv
+
+- 옵션 문자열의 배열
+  - `argv[0]` 는 실행 파일명
+  - `argv[1]` ~ `argv[argc - 1]` 는 사용자가 입력한 option arguments
