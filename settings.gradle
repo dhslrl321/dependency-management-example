@@ -1,0 +1,10 @@
+rootProject.name = 'dependency-management-example'
+
+include 'domain'
+include 'application'
+include 'dependency'
+include 'dependency-impl'
+
+include 'legacy-user'
+include 'external-product-api'
+
